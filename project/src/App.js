@@ -11,16 +11,16 @@ import Footer from "./components/Footer";
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
+      <div className="App-container">
+        <div className="App-title">
           <Title />
-        </header>
-        <header className="App-profile">
+        </div>
+        <div className="App-profile">
           <Profile />
-        </header>
-        <header className="App-profile">
+        </div>
+        <div className="App-navbar">
           <Navbar />
-        </header>
+        </div>
         <div className="App-home">
           <Home />
         </div>
@@ -28,10 +28,10 @@ class App extends Component {
           <Filter />
         </div>
         <div className="App-newarticle">
-        <NewArticle />
+          <NewArticle />
         </div>
         <div className="App-footer">
-        <Footer />
+          <Footer />
         </div>
       </div>
     );
