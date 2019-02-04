@@ -1,8 +1,8 @@
 .App-container {
   text-align: center;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 8em 1fr;
+  grid-template-rows: 7em 3em 1fr 1em;
 }
 
 .App-title {
@@ -23,26 +23,34 @@
   border-style: dashed;
 }
 
-.App-home {
-  grid-column: 1 / 3;
-  grid-row: 3 / 5;
-  border-style: dashed;
-}
-
-.App-filter {
-  grid-column: 3 / end;
+.App-mainbox {
+  grid-column: 1 / end;
   grid-row: 3 / 4;
   border-style: dashed;
 }
 
-.App-newarticle {
-  grid-column: 3 / end;
-  grid-row: 4 / 5;
+.Home {
+  text-align: center;
+  display: grid;
+  grid-template-columns: 1fr 11em;
+  grid-template-rows: 7em 1fr;
+  border-style: dashed;
+}
+
+.Filter {
+  grid-column: 2 / end;
+  grid-row: 1 / 2;
+  border-style: dashed;
+}
+
+.NewArticle {
+  grid-column: 2 / end;
+  grid-row: 2 / end;
   border-style: dashed;
 }
 
 .App-footer {
   grid-column: 1 / end;
-  grid-row: 5 / end;
+  grid-row: 4 / end;
   border-style: dashed;
 }

@@ -1,11 +1,10 @@
 import React, { Component } from "react";
+import { Router } from "@reach/router";
 import "./App.css";
 import Title from "./components/Title";
 import Profile from "./components/Profile";
 import Navbar from "./components/Navbar";
 import Home from "./components/Home";
-import Filter from "./components/Filter";
-import NewArticle from "./components/NewArticle";
 import Footer from "./components/Footer";
 
 class App extends Component {
@@ -21,15 +20,13 @@ class App extends Component {
         <div className="App-navbar">
           <Navbar />
         </div>
-        <div className="App-home">
-          <Home />
-        </div>
-        <div className="App-filter">
-          <Filter />
-        </div>
-        <div className="App-newarticle">
-          <NewArticle />
-        </div>
+
+        <Router className="App-mainbox">
+  
+          <Home path="/" className="Home"  />
+
+        </Router>
+
         <div className="App-footer">
           <Footer />
         </div>
