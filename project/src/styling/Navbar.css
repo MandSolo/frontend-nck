@@ -1,17 +1,16 @@
 .Navbar {
-    font-family: 'Major Mono Display', monospace;
-    font-size: 2em;
-    font-weight: bold;
-    background-color: #061630;
-    opacity: 0.8;
+  font-family: 'Alfa Slab One', cursive;
+    font-size: 15px;
+    background-color: #1e075c;
+    opacity: 0.9;
     color: white;
     margin: 0px;
-    padding: 1px;
+    padding: 6px;
 }
 
 .Navbar a:link,
 a:visited {
-  background-color:  #061630;
+  background-color:  #1e075c;
   color: white;
   padding: 0px 0px;
   text-align: center;
@@ -22,7 +21,6 @@ a:visited {
 .Navbar a:hover,
 a:active {
   color: white;
-  background-color: #0099ff;
+  background-color: #70204c;
   border-radius: 5px;
-
 }
