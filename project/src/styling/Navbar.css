@@ -8,3 +8,21 @@
     margin: 0px;
     padding: 1px;
 }
+
+.Navbar a:link,
+a:visited {
+  background-color:  #061630;
+  color: white;
+  padding: 0px 0px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.Navbar a:hover,
+a:active {
+  color: white;
+  background-color: #0099ff;
+  border-radius: 5px;
+
+}

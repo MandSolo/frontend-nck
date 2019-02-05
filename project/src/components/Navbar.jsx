@@ -1,9 +1,15 @@
 import React, { Component } from "react";
-import "../styling/Navbar.css"
+import { Link } from "@reach/router";
+import "../styling/Navbar.css";
 
 class Navbar extends Component {
   render() {
-    return <div className="Navbar">Navbar</div>;
+    return (
+      <div className="Navbar">
+        <Link to="/">Home</Link>{"‣"}
+        <Link to="/topics">Topics</Link>{"‣"}
+      </div>
+    );
   }
 }
 
