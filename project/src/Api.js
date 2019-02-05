@@ -6,3 +6,8 @@ export const getTopics = async () => {
     const { data } = await axios.get(`${BASE_URL}/topics`);
     return data.topics;
   };
+
+  export const getUsers = async () => {
+    const { data } = await axios.get(`${BASE_URL}/users`);
+    return data.users;
+  };

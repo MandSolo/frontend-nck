@@ -10,8 +10,7 @@ class Topics extends Component {
   render() {
     return (
       <div className="Topics">
-        <h1> TOPICS </h1>
-
+        <h1> Topics </h1>
         <p>
           {this.state.topics.map(topic => {
             return (
