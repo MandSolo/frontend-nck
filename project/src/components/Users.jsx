@@ -1,10 +1,11 @@
 import React, { Component } from "react";
+import { Link } from "@reach/router";
 import * as api from "../Api";
 import "../styling/Users.css";
 
 class Users extends Component {
   state = {
-    Users: []
+    users: []
   };
 
   render() {
@@ -12,18 +13,21 @@ class Users extends Component {
       <div className="Users">
         <h1> Users </h1>
         <p>
-          {this.state.Users.map(User => {
+          {this.state.users.map(user => {
             return (
               <ul>
                 <li>
                   <img
                     className="image is-96x96"
-                    src={User.avatar_url}
+                    src={user.avatar_url}
                     alt="User Avatar"
                   />
                 </li>
-                <li>Username: {User.username}</li>
-                <li>Name: {User.name}</li>
+                <li>Username: {user.username}</li>
+                <li>Name: {user.name}</li>
+                <li>
+                  <Link to={`/users/${user.username}`}>View Profile Page</Link>
+                </li>
               </ul>
             );
           })}
@@ -37,8 +41,8 @@ class Users extends Component {
   }
 
   fetchUsers = () => {
-    api.getUsers().then(Users => {
-      this.setState({ Users });
+    api.getUsers().then(users => {
+      this.setState({ users });
     });
   };
 }
