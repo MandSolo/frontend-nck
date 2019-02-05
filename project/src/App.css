@@ -25,7 +25,7 @@
   grid-row: 3 / 4;
 }
 
-.Home {
+.Articles {
   text-align: center;
   display: grid;
   grid-template-columns: 1fr 40%;
