@@ -5,6 +5,7 @@ import Title from "./components/Title";
 import Profile from "./components/Profile";
 import Navbar from "./components/Navbar";
 import Home from "./components/Home";
+import Topics from "./components/Topics";
 import Footer from "./components/Footer";
 
 class App extends Component {
@@ -24,6 +25,7 @@ class App extends Component {
         <Router className="App-mainbox">
   
           <Home path="/" className="Home"  />
+          <Topics path="/topics" className="Topics" />
 
         </Router>
 
