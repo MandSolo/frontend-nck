@@ -1,3 +1,10 @@
 .Footer {
-    font-family: 'Abril Fatface', cursive;
+    font-family: 'Major Mono Display', monospace;
+    font-size: 0.6em;
+    font-weight: bold;
+    background-color: black;
+    color: white;
+    margin: 0px;
+    padding: 1px;
+    opacity: 0.8;
 }

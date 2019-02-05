@@ -1,4 +1,10 @@
 .Navbar {
-    font-family: 'Abril Fatface', cursive;
+    font-family: 'Major Mono Display', monospace;
     font-size: 2em;
+    font-weight: bold;
+    background-color: #061630;
+    opacity: 0.8;
+    color: white;
+    margin: 0px;
+    padding: 1px;
 }

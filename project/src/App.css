@@ -1,56 +1,48 @@
 .App-container {
   text-align: center;
   display: grid;
-  grid-template-columns: 8em 1fr;
-  grid-template-rows: 7em 3em 1fr 1em;
+  grid-template-columns: 40% 1fr;
+  grid-template-rows: 9em 2em 1fr 1em;
 }
 
 .App-title {
   grid-column: 1 / 2;
   grid-row: 1 / 2;
-  border-style: dashed;
 }
 
 .App-profile {
   grid-column: 2 / end;
   grid-row: 1 / 2;
-  border-style: dashed;
 }
 
 .App-navbar {
   grid-column: 1 / end;
   grid-row: 2 / 3;
-  border-style: dashed;
 }
 
 .App-mainbox {
   grid-column: 1 / end;
   grid-row: 3 / 4;
-  border-style: dashed;
 }
 
 .Home {
   text-align: center;
   display: grid;
-  grid-template-columns: 1fr 11em;
-  grid-template-rows: 7em 1fr;
-  border-style: dashed;
+  grid-template-columns: 1fr 40%;
+  grid-template-rows: 10em 16em;
 }
 
 .Filter {
   grid-column: 2 / end;
   grid-row: 1 / 2;
-  border-style: dashed;
 }
 
 .NewArticle {
   grid-column: 2 / end;
   grid-row: 2 / end;
-  border-style: dashed;
 }
 
 .App-footer {
   grid-column: 1 / end;
   grid-row: 4 / end;
-  border-style: dashed;
 }

@@ -1,4 +1,10 @@
 .Title {
-    font-family: 'Abril Fatface', cursive;
-    font-size: 1em;
+    font-family: 'Major Mono Display', monospace;
+    font-size: 1.2em;
+    font-weight: bold;
+    background-color: black;
+    color: white;
+    margin: 0px;
+    padding: 1px;
+    opacity: 0.8;
 }

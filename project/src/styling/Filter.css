@@ -1,3 +1,8 @@
 .Filter {
     font-family: 'Krub', sans-serif;
+    background-color: #e04070;
+    color: white;
+    margin: 5px;
+    padding: 1px;
+    border-radius: 5px;
 }
