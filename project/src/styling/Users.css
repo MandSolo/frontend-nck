@@ -13,3 +13,7 @@
     text-align: justify;
     list-style: none;
   }
+
+  .Users a {
+    color: black;
+    }

@@ -12,6 +12,11 @@ export const getUsers = async () => {
   return data.users;
 };
 
+export const getUserByUsername = async username => {
+  const { data } = await axios.get(`${BASE_URL}/users/${username}`);
+  return data.user;
+};
+
 export const getArticles = async () => {
   const { data } = await axios.get(`${BASE_URL}/articles`);
   return data.articles;
@@ -19,5 +24,5 @@ export const getArticles = async () => {
 
 export const getArticleById = async article_id => {
   const { data } = await axios.get(`${BASE_URL}/articles/${article_id}`);
-  return data.article;
+  return data.article[0];
 };
