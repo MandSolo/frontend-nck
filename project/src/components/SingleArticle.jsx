@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import * as api from "../Api";
 import AddVote from "./AddVote";
-import NewComment from "./NewComment";
+import Comments from "./Comments";
 import "../styling/SingleArticle.css";
 import moment from "moment";
 
@@ -32,7 +32,7 @@ class SingleArticle extends Component {
 
 
         <AddVote path="/" className="Article-vote" />
-        <NewComment path="/" className="Article-newcomment" />
+        <Comments path="/" className="Article-comments" />
 
       </div>
     );

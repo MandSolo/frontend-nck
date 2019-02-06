@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Router } from "@reach/router";
 import "./App.css";
 import Title from "./components/Title";
-import Profile from "./components/Profile";
+import Login from "./components/Login";
 import Navbar from "./components/Navbar";
 import Home from "./components/Home";
 import Articles from "./components/Articles";
@@ -19,8 +19,8 @@ class App extends Component {
         <div className="App-title">
           <Title />
         </div>
-        <div className="App-profile">
-          <Profile />
+        <div className="App-login">
+          <Login />
         </div>
         <div className="App-navbar">
           <Navbar />

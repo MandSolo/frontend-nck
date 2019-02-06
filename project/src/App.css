@@ -10,7 +10,7 @@
   grid-row: 1 / 2;
 }
 
-.App-profile {
+.App-login {
   grid-column: 2 / end;
   grid-row: 1 / 2;
 }
@@ -28,7 +28,7 @@
 .Articles {
   text-align: center;
   display: grid;
-  grid-template-rows: 10% 5% 1fr;
+  grid-template-rows: 10% 7% 1fr;
 }
 
 .Filter {
@@ -51,7 +51,7 @@
 .SingleArticle {
   text-align: center;
   display: grid;
-  grid-template-rows: 1fr 5% 10%;
+  grid-template-rows: 1fr 10% 1fr;
 }
 
 .SingleArticle-view {
@@ -62,7 +62,7 @@
   grid-row: 2 / 3;
 }
 
-.NewComment {
+.Comments {
   grid-row: 3 / end;
 }
 

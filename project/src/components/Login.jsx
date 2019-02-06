@@ -1,13 +1,13 @@
 import React, { Component } from "react";
-import "../styling/Profile.css";
+import "../styling/Login.css";
 
-class Profile extends Component {
+class Login extends Component {
   render() {
-    return <div className="Profile">
+    return <div className="Login">
     <h1>Log in here</h1>
     <p>helloooo user welcome back!</p>
     </div>;
   }
 }
 
-export default Profile;
+export default Login;
