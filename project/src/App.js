@@ -6,8 +6,10 @@ import Profile from "./components/Profile";
 import Navbar from "./components/Navbar";
 import Home from "./components/Home";
 import Articles from "./components/Articles";
+import SingleArticle from "./components/SingleArticle";
 import Topics from "./components/Topics";
 import Users from "./components/Users";
+import SingleUser from "./components/SingleUser";
 import Footer from "./components/Footer";
 
 class App extends Component {
@@ -28,8 +30,10 @@ class App extends Component {
         
           <Home path="/" className="Home" />
           <Articles path="/articles" className="Articles" />
+          <SingleArticle path="/articles/:article_id" className="SingleArticle" />
           <Topics path="/topics" className="Topics" />
           <Users path="/users" className="Users" />
+          <SingleUser path="/users/:username" className="SingleUser" />
         </Router>
 
         <div className="App-footer">

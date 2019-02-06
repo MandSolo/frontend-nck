@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { Link } from "@reach/router";
 import * as api from "../Api";
 import "../styling/Topics.css";
 
@@ -16,8 +15,8 @@ class Topics extends Component {
           {this.state.topics.map(topic => {
             return (
               <ul>
-                <li>Topic: <Link to={`/${topic.slug}`}>{topic.slug}</Link></li>
-                <li>Description: {topic.description}</li>
+                <li><b>{topic.slug}</b></li>
+                <li>About: {topic.description}</li>
               </ul>
             );
           })}

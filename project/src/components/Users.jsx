@@ -23,10 +23,9 @@ class Users extends Component {
                     alt="User Avatar"
                   />
                 </li>
-                <li>Username: {user.username}</li>
-                <li>Name: {user.name}</li>
+                <li><b>{user.username}</b></li>
                 <li>
-                  <Link to={`/users/${user.username}`}>View Profile Page</Link>
+                  <Link to={`/users/${user.username}`}>View Profile</Link>
                 </li>
               </ul>
             );
