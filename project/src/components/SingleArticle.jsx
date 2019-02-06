@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import * as api from "../Api";
+import AddVote from "./AddVote";
+import NewComment from "./NewComment";
 import "../styling/SingleArticle.css";
 import moment from "moment";
 
@@ -11,12 +13,10 @@ class SingleArticle extends Component {
   render() {
     return (
       <div className="SingleArticle">
+      <div className= "SingleArticle-view">
         <h1>
           <b>{this.state.article.title}</b>
         </h1>
-        <p>
-          <b> Votes: {this.state.article.votes}</b>
-        </p>
         <p> {this.state.article.body}</p>
         <ul>
           <li>Written By: {this.state.article.author}</li>
@@ -27,10 +27,13 @@ class SingleArticle extends Component {
               .fromNow()}
           </li>
         </ul>
-        ******************************************
-        ******************************************
-        ******************************************<br></br>
-        COMMENTS WILL GO HERE!!!!!!!!!!!!
+
+        </div>
+
+
+        <AddVote path="/" className="Article-vote" />
+        <NewComment path="/" className="Article-newcomment" />
+
       </div>
     );
   }

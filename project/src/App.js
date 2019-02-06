@@ -26,7 +26,7 @@ class App extends Component {
           <Navbar />
         </div>
 
-        <Router className="App-mainbox">
+        <Router className="App-router">
         
           <Home path="/" className="Home" />
           <Articles path="/articles" className="Articles" />
