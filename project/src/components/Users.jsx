@@ -12,25 +12,27 @@ class Users extends Component {
     return (
       <div className="Users">
         <h1> Users </h1>
-        <p>
-          {this.state.users.map(user => {
-            return (
-              <ul>
-                <li>
-                  <img
-                    className="image is-96x96"
-                    src={user.avatar_url}
-                    alt="User Avatar"
-                  />
-                </li>
-                <li><b>{user.username}</b></li>
-                <li>
-                  <Link to={`/users/${user.username}`}>View Profile</Link>
-                </li>
-              </ul>
-            );
-          })}
-        </p>
+        <div className="Users-container">
+            {this.state.users.map(user => {
+              return (
+                <ul>
+                  <li>
+                    <img
+                      className="image is-96x96"
+                      src={user.avatar_url}
+                      alt="User Avatar"
+                    />
+                  </li>
+                  <li>
+                    <b>{user.username}</b>
+                  </li>
+                  <li>
+                    <Link to={`/users/${user.username}`}>View Profile</Link>
+                  </li>
+                </ul>
+              );
+            })}
+        </div>
       </div>
     );
   }

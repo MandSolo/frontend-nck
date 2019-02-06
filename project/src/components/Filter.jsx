@@ -5,9 +5,9 @@ import "../App.css";
 class Filter extends Component {
   render() {
     return <div className="Filter">
-    <h1> filter</h1>
+    <h1> Filter</h1>
     <p>
-    As a user, I should be able to sort articles by: 
+    SORT BY:
     - date created
     - comment_count
     - votes

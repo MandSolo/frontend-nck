@@ -6,7 +6,6 @@
     margin: 10px;
     padding: 0px;
     border-radius: 10px;
-  
   }
   
   ul {
@@ -16,4 +15,9 @@
 
   .Users a {
     color: black;
+    }
+
+    .Users-container {
+      display: flex;
+      flex-wrap: wrap;
     }

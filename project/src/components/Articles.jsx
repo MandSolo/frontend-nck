@@ -15,6 +15,10 @@ class Articles extends Component {
   render() {
     return (
       <div className="Articles">
+
+        <Filter path="/" className="Articles-filter" />
+        <NewArticle path="/" className="Articles-newarticle" />
+
         <div className="Article-view">
           <h1> Articles</h1>
           <p>
@@ -31,8 +35,6 @@ class Articles extends Component {
             })}
           </p>
         </div>
-        <Filter path="/" className="Articles-filter" />
-        <NewArticle path="/" className="Articles-newarticle" />
       </div>
     );
   }

@@ -28,7 +28,7 @@
 .Articles {
   text-align: center;
   display: grid;
-  grid-template-rows: 10% 7% 1fr;
+  grid-template-rows: 10% 20% 1fr;
 }
 
 .Filter {
@@ -64,6 +64,20 @@
 
 .Comments {
   grid-row: 3 / end;
+}
+
+.Topics {
+  text-align: center;
+  display: grid;
+  grid-template-rows: 30% 1fr;
+}
+
+.Topics-newtopic {
+  grid-row: 1 / 2;
+}
+
+.Topics-view {
+  grid-row: 2 / end;
 }
 
 .App-footer {

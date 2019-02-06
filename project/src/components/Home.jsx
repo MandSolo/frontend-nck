@@ -7,7 +7,7 @@ class Home extends Component {
     return (
       <div className="Home">
         <h1>Welcome to MC News</h1>
-        <img src={fakenews} alt="Fake News"/>
+        <img src={fakenews} alt="Fake News" width="300px"/>
         <p>Please log in at the top of this page!</p>
       </div>
     );

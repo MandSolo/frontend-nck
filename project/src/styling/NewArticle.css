@@ -6,3 +6,16 @@
   padding: 1px;
   border-radius: 5px;
 }
+
+.New-title {
+  width: 70%;
+}
+
+.Select-topic {
+  width: 70%;
+}
+
+.New-body {
+  width: 70%;
+  height: 100px;
+}
