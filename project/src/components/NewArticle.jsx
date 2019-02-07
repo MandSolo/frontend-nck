@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import * as api from "../Api";
+import { navigate } from "@reach/router";
 import "../styling/NewArticle.css";
 import "../App.css";
 
@@ -19,7 +20,8 @@ class NewArticle extends Component {
         <h2>Compose New Article</h2>
         <form onSubmit={this.handleSubmit}>
           Title:
-          <input className="New-title"
+          <input
+            className="New-title"
             id="title"
             type="text"
             value={this.state.title}
@@ -39,8 +41,9 @@ class NewArticle extends Component {
             ))}
           </select>
           <br />
-          Body:
-          <textarea className="New-body"
+          Article:
+          <textarea
+            className="New-body"
             id="body"
             type="text"
             value={this.state.body}
@@ -72,13 +75,14 @@ class NewArticle extends Component {
   handleSubmit = event => {
     const { title, body, username, topic } = this.state;
     event.preventDefault();
-    api.addArticle(title, body, username, topic).then(() =>
+    api.addArticle(title, body, username, topic).then(() => {
       this.setState({
         title: "",
         body: "",
         topic: ""
-      })
-    );
+      });
+      navigate(`/topics/${topic}`);
+    });
   };
 
   handleTopicSelect = event => {

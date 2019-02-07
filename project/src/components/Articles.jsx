@@ -17,7 +17,7 @@ class Articles extends Component {
       <div className="Articles">
 
         <Filter path="/" className="Articles-filter" />
-        <NewArticle path="/" className="Articles-newarticle" />
+        <NewArticle path="/" className="Articles-newarticle"/>
 
         <div className="Article-view">
           <h1> Articles</h1>

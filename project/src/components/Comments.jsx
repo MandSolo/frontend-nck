@@ -1,15 +1,14 @@
 import React, { Component } from "react";
 import * as api from "../Api";
 import "../styling/Comments.css";
+import moment from "moment";
 
 class Comments extends Component {
   state = {
-    comments: [],
+    comments: []
   };
 
   render() {
-    
-    console.log(this.state.comments)
     return (
       <div className="Comments">
         <div className="Comments-view">
@@ -19,8 +18,14 @@ class Comments extends Component {
               return (
                 <ul>
                   <li>
-                    <b>{comment.body}</b>
+                    Author: <b>{comment.author}</b>
                   </li>
+                  <li>
+                    On:{" "}
+                    {moment(comment.created_at)
+                     .format('llll')}
+                  </li>
+                  <li>{comment.body}</li>
                 </ul>
               );
             })}
@@ -39,8 +44,7 @@ class Comments extends Component {
   }
 
   fetchComments = () => {
-    api.getArticleComments(this.props.comments).then(comments => {
-      
+    api.getArticleComments(this.props.article_id).then(comments => {
       this.setState({ comments });
     });
   };

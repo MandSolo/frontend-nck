@@ -32,7 +32,7 @@ class SingleArticle extends Component {
 
 
         <AddVote path="/" className="Article-vote" />
-        <Comments path="/" className="Article-comments" />
+        <Comments path="/" className="Article-comments" article_id={this.props.article_id}/>
 
       </div>
     );

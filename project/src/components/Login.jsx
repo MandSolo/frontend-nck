@@ -4,7 +4,7 @@ import "../styling/Login.css";
 
 class Login extends Component {
   state = {
-    username: " ",
+    username: "tickle122",
     users: []
   };
 
@@ -46,17 +46,11 @@ class Login extends Component {
   };
 
   handleSubmit = event => {
+    console.log(this.state.username)
     event.preventDefault();
     this.props.login(this.state.username);
     this.setState({
       username: ""
-    });
-  };
-
-  showUsers = () => {
-    const { hidden } = this.state;
-    this.setState({
-      hidden: !hidden
     });
   };
 
@@ -66,12 +60,7 @@ class Login extends Component {
       .then(users => {
         this.setState(() => ({ users: users }));
       })
-      .catch(err =>
-        this.setState({
-          hasError: err
-        })
-      );
-  };
+    }
 }
 
 export default Login;

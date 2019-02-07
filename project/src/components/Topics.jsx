@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "@reach/router";
 import NewTopic from "./NewTopic";
 import * as api from "../Api";
 import "../styling/Topics.css";
@@ -19,9 +20,14 @@ class Topics extends Component {
               return (
                 <ul>
                   <li>
-                    <b>{topic.slug}</b>
+                    Topic: <b>{topic.slug}</b>
                   </li>
                   <li>About: {topic.description}</li>
+                  <li>
+                    <Link to={`/topics/${topic.slug}`}>
+                      View All Articles for {topic.slug}
+                    </Link>
+                  </li>
                 </ul>
               );
             })}

@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Router } from "@reach/router";
+import * as api from "./Api";
 import "./App.css";
 import Title from "./components/Title";
 import Login from "./components/Login";
@@ -8,11 +9,15 @@ import Home from "./components/Home";
 import Articles from "./components/Articles";
 import SingleArticle from "./components/SingleArticle";
 import Topics from "./components/Topics";
+import SingleTopic from "./components/SingleTopic";
 import Users from "./components/Users";
 import SingleUser from "./components/SingleUser";
 import Footer from "./components/Footer";
 
 class App extends Component {
+
+state= {user: {}};
+
   render() {
     return (
       <div className="App-container">
@@ -20,18 +25,21 @@ class App extends Component {
           <Title />
         </div>
         <div className="App-login">
-          <Login />
+          <Login login={this.login} username={this.state.user.username} />
         </div>
         <div className="App-navbar">
           <Navbar />
         </div>
 
         <Router className="App-router">
-        
           <Home path="/" className="Home" />
           <Articles path="/articles" className="Articles" />
-          <SingleArticle path="/articles/:article_id" className="SingleArticle" />
+          <SingleArticle
+            path="/articles/:article_id"
+            className="SingleArticle"
+          />
           <Topics path="/topics" className="Topics" />
+          <SingleTopic path="/topics/:topic" className="SingleTopic" />
           <Users path="/users" className="Users" />
           <SingleUser path="/users/:username" className="SingleUser" />
         </Router>
@@ -42,6 +50,10 @@ class App extends Component {
       </div>
     );
   }
+
+login = (username) => {
+api.getUserByUsername(username).then(user => this.setState ({ user: user}))
 }
 
+};
 export default App;

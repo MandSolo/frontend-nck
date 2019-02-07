@@ -7,13 +7,21 @@ export const getTopics = async () => {
   return data.topics;
 };
 
+export const getArticlesByTopic = async topic => {
+  const { data } = await axios.get(`${BASE_URL}/topics/${topic}/articles`);
+  return data.articles;
+};
+
+
 export const getUsers = async () => {
   const { data } = await axios.get(`${BASE_URL}/users`);
   return data.users;
 };
 
 export const getUserByUsername = async username => {
+
   const { data } = await axios.get(`${BASE_URL}/users/${username}`);
+  console.log(username)
   return data.user;
 };
 
