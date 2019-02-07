@@ -15,7 +15,10 @@ class Login extends Component {
     const loggedIn = username;
 
     return loggedIn ? (
-      <p>Hello {this.props.username}, welcome back! </p>
+      <div className="Logged-in">
+        <p>Hello {this.props.username},</p>
+        <p> Welcome back! </p>
+      </div>
     ) : (
       <div className="Login">
         <p>Select your username:</p>
@@ -46,7 +49,7 @@ class Login extends Component {
   };
 
   handleSubmit = event => {
-    console.log(this.state.username)
+    console.log(this.state.username);
     event.preventDefault();
     this.props.login(this.state.username);
     this.setState({
@@ -55,12 +58,10 @@ class Login extends Component {
   };
 
   fetchUsers = () => {
-    api
-      .getUsers()
-      .then(users => {
-        this.setState(() => ({ users: users }));
-      })
-    }
+    api.getUsers().then(users => {
+      this.setState(() => ({ users: users }));
+    });
+  };
 }
 
 export default Login;

@@ -1,3 +1,14 @@
+.Logged-in {
+    font-family: 'Thasadith', sans-serif;
+    font-size: 13px;
+    background-color: black;
+    color: white;
+    margin: 0px;
+    padding: 0.6em;
+    opacity: 0.9;
+}
+
+
 .Login {
     font-family: 'Thasadith', sans-serif;
     font-size: 10px;

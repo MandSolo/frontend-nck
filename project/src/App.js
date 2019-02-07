@@ -12,11 +12,11 @@ import Topics from "./components/Topics";
 import SingleTopic from "./components/SingleTopic";
 import Users from "./components/Users";
 import SingleUser from "./components/SingleUser";
+import NotFound from "./components/NotFound";
 import Footer from "./components/Footer";
 
 class App extends Component {
-
-state= {user: {}};
+  state = { user: {} };
 
   render() {
     return (
@@ -42,6 +42,7 @@ state= {user: {}};
           <SingleTopic path="/topics/:topic" className="SingleTopic" />
           <Users path="/users" className="Users" />
           <SingleUser path="/users/:username" className="SingleUser" />
+          <NotFound default />
         </Router>
 
         <div className="App-footer">
@@ -51,9 +52,8 @@ state= {user: {}};
     );
   }
 
-login = (username) => {
-api.getUserByUsername(username).then(user => this.setState ({ user: user}))
+  login = username => {
+    api.getUserByUsername(username).then(user => this.setState({ user: user }));
+  };
 }
-
-};
 export default App;
