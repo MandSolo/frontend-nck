@@ -1,13 +1,23 @@
 import React, { Component } from "react";
 import * as api from "../Api";
+import Loading from "./Loading";
 import "../styling/SingleTopic.css";
 
 class SingleTopic extends Component {
   state = {
-    articles: []
+    articles: [], 
+    isLoading: true
   };
 
   render() {
+
+    if (this.state.isLoading) {
+      return (
+        <div className="Loading-page">
+          <Loading path="/" className="Loading-gif" />
+        </div>
+      );
+    }
     return (
       <div className="SingleTopic">
         <h1>
@@ -23,7 +33,7 @@ class SingleTopic extends Component {
 
   fetchArticlesByTopic = () => {
     api.getArticlesByTopic().then(articles => {
-      this.setState({ articles });
+      this.setState({ articles, isLoading: false });
     });
   };
 }

@@ -1,14 +1,24 @@
 import React, { Component } from "react";
 import * as api from "../Api";
+import Loading from "./Loading";
 import "../styling/SingleUser.css";
 
 class SingleUser extends Component {
   state = {
-    user: {}
+    user: {},
+    isLoading: true
   };
 
   render() {
    
+    if (this.state.isLoading) {
+      return (
+        <div className="Loading-page">
+          <Loading path="/" className="Loading-gif" />
+        </div>
+      );
+    }
+
     return (
       <div className="SingleUser">
         <p>
@@ -35,7 +45,7 @@ class SingleUser extends Component {
 
   fetchUser = () => {
     api.getUserByUsername(this.props.username).then(user => {
-      this.setState({ user });
+      this.setState({ user, isLoading: false });
     });
   };
 }

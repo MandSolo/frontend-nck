@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import * as api from "../Api";
+import Loading from "./Loading";
 import AddVote from "./AddVote";
 import Comments from "./Comments";
 import "../styling/SingleArticle.css";
@@ -7,33 +8,43 @@ import moment from "moment";
 
 class SingleArticle extends Component {
   state = {
-    article: {}
+    article: {},
+    isLoading: true
   };
 
   render() {
+    if (this.state.isLoading) {
+      return (
+        <div className="Loading-page">
+          <Loading path="/" className="Loading-gif" />
+        </div>
+      );
+    }
+
     return (
       <div className="SingleArticle">
-      <div className= "SingleArticle-view">
-        <h1>
-          <b>{this.state.article.title}</b>
-        </h1>
-        <p> {this.state.article.body}</p>
-        <ul>
-          <li>Written By: {this.state.article.author}</li>
-          <li>
-            Created:
-            {moment(this.state.article.created_at)
-              .startOf("hour")
-              .fromNow()}
-          </li>
-        </ul>
-
+        <div className="SingleArticle-view">
+          <h1>
+            <b>{this.state.article.title}</b>
+          </h1>
+          <p> {this.state.article.body}</p>
+          <ul>
+            <li>Written By: {this.state.article.author}</li>
+            <li>
+              Created:
+              {moment(this.state.article.created_at)
+                .startOf("hour")
+                .fromNow()}
+            </li>
+          </ul>
         </div>
 
-
         <AddVote path="/" className="Article-vote" />
-        <Comments path="/" className="Article-comments" article_id={this.props.article_id}/>
-
+        <Comments
+          path="/"
+          className="Article-comments"
+          article_id={this.props.article_id}
+        />
       </div>
     );
   }
@@ -46,7 +57,7 @@ class SingleArticle extends Component {
     console.log(this.props);
     api.getArticleById(this.props.article_id).then(article => {
       console.log(article);
-      this.setState({ article });
+      this.setState({ article, isLoading: false });
     });
   };
 }

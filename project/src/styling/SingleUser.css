@@ -1,15 +1,14 @@
 .SingleUser {
-    font-family: 'Thasadith', sans-serif;
-      background-color: #ffffff;
-      color: black;
-      opacity: 0.9;
-      margin: 10px;
-      padding: 0px;
-      border-radius: 10px;
-    
-    }
-    
-    ul {
-      text-align: justify;
-      list-style: none;
-    }
+  font-family: "Thasadith", sans-serif;
+  background-color: #ffffff;
+  color: black;
+  opacity: 0.9;
+  margin: 10px;
+  padding: 0px;
+  border-radius: 10px;
+}
+
+ul {
+  text-align: justify;
+  list-style: none;
+}

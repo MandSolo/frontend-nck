@@ -1,14 +1,26 @@
 import React, { Component } from "react";
 import { Link } from "@reach/router";
 import * as api from "../Api";
+import Loading from "./Loading";
 import "../styling/Users.css";
 
 class Users extends Component {
   state = {
-    users: []
+    users: [],
+    isLoading: true
   };
 
   render() {
+
+    if (this.state.isLoading) {
+      return (
+        <div className="Loading-page">
+          <Loading path="/" className="Loading-gif" />
+        </div>
+      );
+    }
+
+
     return (
       <div className="Users">
         <h1> Users </h1>
@@ -43,7 +55,7 @@ class Users extends Component {
 
   fetchUsers = () => {
     api.getUsers().then(users => {
-      this.setState({ users });
+      this.setState({ users, isLoading: false });
     });
   };
 }

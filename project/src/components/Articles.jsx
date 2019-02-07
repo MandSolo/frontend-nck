@@ -1,6 +1,7 @@
 import React, { Component } from "react";
-import {Link} from "@reach/router";
+import { Link } from "@reach/router";
 import * as api from "../Api";
+import Loading from "./Loading";
 import Filter from "./Filter";
 import NewArticle from "./NewArticle";
 import "../styling/Articles.css";
@@ -9,27 +10,44 @@ import moment from "moment";
 
 class Articles extends Component {
   state = {
-    articles: []
+    articles: [],
+    isLoading: true
   };
 
   render() {
+    if (this.state.isLoading) {
+      return (
+        <div className="Loading-page">
+          <Loading path="/" className="Loading-gif" />
+        </div>
+      );
+    }
+
     return (
       <div className="Articles">
-
         <Filter path="/" className="Articles-filter" />
-        <NewArticle path="/" className="Articles-newarticle"/>
-
+        <NewArticle path="/" className="Articles-newarticle" />
         <div className="Article-view">
           <h1> Articles</h1>
           <p>
             {this.state.articles.map(article => {
               return (
                 <ul>
-                  <li><b>{article.title}</b></li>
+                  <li>
+                    <b>{article.title}</b>
+                  </li>
                   <li>Written By: {article.author}</li>
-                  <li>Created: 
-                  {moment(article.created_at).startOf('hour').fromNow()}</li>
-                  <li><Link to={`/articles/${article.article_id}`}>Click here to read</Link></li>
+                  <li>
+                    Created:
+                    {moment(article.created_at)
+                      .startOf("hour")
+                      .fromNow()}
+                  </li>
+                  <li>
+                    <Link to={`/articles/${article.article_id}`}>
+                      Click here to read
+                    </Link>
+                  </li>
                 </ul>
               );
             })}
@@ -45,7 +63,7 @@ class Articles extends Component {
 
   fetchArticles = () => {
     api.getArticles(this.props.article).then(articles => {
-      this.setState({ articles });
+      this.setState({ articles, isLoading: false });
     });
   };
 }
