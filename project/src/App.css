@@ -51,7 +51,7 @@
 .SingleArticle {
   text-align: center;
   display: grid;
-  grid-template-rows: 1fr 10% 1fr;
+  grid-template-rows: 1fr 15% 60%;
 }
 
 .SingleArticle-view {
@@ -69,7 +69,7 @@
 .Topics {
   text-align: center;
   display: grid;
-  grid-template-rows: 30% 1fr;
+  grid-template-rows: 35% 1fr;
 }
 
 .Topics-newtopic {

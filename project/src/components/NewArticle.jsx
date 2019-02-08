@@ -19,33 +19,33 @@ class NewArticle extends Component {
       <div className="NewArticle">
         <h2>Compose New Article</h2>
         <form onSubmit={this.handleSubmit}>
-          Title:
           <input
             className="New-title"
             id="title"
             type="text"
+            placeholder="Article Title"
             value={this.state.title}
             onChange={this.handleChange}
             required
           />
           <br />
-          Topic:
           <select
             className="Select-topic"
             value={this.state.topic}
             onChange={this.handleTopicSelect}
             required
           >
+            <option value="options">Choose a topic here</option>
             {topics.map(topic => (
               <option value={topic.slug}>{topic.slug}</option>
             ))}
           </select>
           <br />
-          Article:
           <textarea
             className="New-body"
             id="body"
             type="text"
+            placeholder="Write your article here..."
             value={this.state.body}
             onChange={this.handleChange}
             required

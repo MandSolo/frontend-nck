@@ -1,16 +1,17 @@
 import React, { Component } from "react";
+import { Link } from "@reach/router";
 import * as api from "../Api";
 import Loading from "./Loading";
 import "../styling/SingleTopic.css";
+import moment from "moment";
 
 class SingleTopic extends Component {
   state = {
-    articles: [], 
+    articles: [],
     isLoading: true
   };
 
   render() {
-
     if (this.state.isLoading) {
       return (
         <div className="Loading-page">
@@ -20,9 +21,34 @@ class SingleTopic extends Component {
     }
     return (
       <div className="SingleTopic">
-        <h1>
-          <b>{this.props.topic}</b>
-        </h1>
+        <div className="Articles-by-topic-view">
+          <h1>
+            <b>{this.props.topic}</b>
+          </h1>
+          <p>
+            {this.state.articles.map(article => {
+              return (
+                <ul>
+                  <li>
+                    <b>{article.title}</b>
+                  </li>
+                  <li>Written By: {article.author}</li>
+                  <li>
+                    Created:
+                    {moment(article.created_at)
+                      .startOf("hour")
+                      .fromNow()}
+                  </li>
+                  <li>
+                    <Link to={`/articles/${article.article_id}`}>
+                      Click here to read
+                    </Link>
+                  </li>
+                </ul>
+              );
+            })}
+          </p>
+        </div>
       </div>
     );
   }

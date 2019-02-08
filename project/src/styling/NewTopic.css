@@ -1,8 +1,17 @@
 .NewTopic {
-    font-family: 'Thasadith', sans-serif;
-    background-color: #789c3e;
-    color: white;
-    margin: 5px;
-    padding: 1px;
-    border-radius: 5px;
+  font-family: "Thasadith", sans-serif;
+  background-color: #789c3e;
+  color: white;
+  margin: 5px;
+  padding: 1px;
+  border-radius: 5px;
+}
+
+.New-slug {
+  width: 70%;
+}
+
+.New-description {
+  width: 70%;
+  height: 40px;
 }

@@ -12,16 +12,14 @@ export const getArticlesByTopic = async topic => {
   return data.articles;
 };
 
-
 export const getUsers = async () => {
   const { data } = await axios.get(`${BASE_URL}/users`);
   return data.users;
 };
 
 export const getUserByUsername = async username => {
-
   const { data } = await axios.get(`${BASE_URL}/users/${username}`);
-  console.log(username)
+  console.log(username);
   return data.user;
 };
 
@@ -49,4 +47,30 @@ export const addArticle = async (title, body, username, slug) => {
     username: username
   });
   return data;
+};
+
+export const addComment = async (article_id, username, body) => {
+  const { data } = await axios.post(
+    `${BASE_URL}/articles/${article_id}/comments`,
+    {
+      username: username,
+      body: body
+    }
+  );
+  return data.comment;
+};
+
+export const vote = async (article_id, inc_votes) => {
+  const { data } = await axios.patch(`${BASE_URL}/articles/${article_id}`, {
+    inc_votes: inc_votes
+  });
+  return data.votes;
+};
+
+export const addTopic = async (slug, description) => {
+  const { data } = await axios.post(`${BASE_URL}/topics`, {
+    slug: slug,
+    description: description
+  });
+  return data.topic[0];
 };

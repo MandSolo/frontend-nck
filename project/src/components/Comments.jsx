@@ -5,6 +5,7 @@ import moment from "moment";
 
 class Comments extends Component {
   state = {
+    body: " ",
     comments: []
   };
 
@@ -20,11 +21,7 @@ class Comments extends Component {
                   <li>
                     Author: <b>{comment.author}</b>
                   </li>
-                  <li>
-                    On:{" "}
-                    {moment(comment.created_at)
-                     .format('llll')}
-                  </li>
+                  <li>On: {moment(comment.created_at).format("llll")}</li>
                   <li>{comment.body}</li>
                 </ul>
               );
@@ -33,7 +30,22 @@ class Comments extends Component {
         </div>
 
         <div className="New-comment">
-          <h1>add new comment here!!!</h1>
+          <h2>Add Your Comment</h2>
+          <form onSubmit={this.handleSubmit}>
+            <textarea
+              className="New-body"
+              id="body"
+              type="text"
+              placeholder="Write your comment here..."
+              value={this.state.body}
+              onChange={this.handleChange}
+              required
+            />
+            <br />
+            <button type="submit" className="commentButton">
+              Add Comment
+            </button>
+          </form>
         </div>
       </div>
     );
@@ -46,6 +58,31 @@ class Comments extends Component {
   fetchComments = () => {
     api.getArticleComments(this.props.article_id).then(comments => {
       this.setState({ comments });
+    });
+  };
+
+  handleChange = event => {
+    const { id } = event.target;
+    this.setState({
+      [id]: event.target.value
+    });
+  };
+  handleSubmit = event => {
+    const { article_id } = this.props;
+    event.preventDefault();
+    this.addComment(article_id).then(() =>
+      this.setState({
+        body: ""
+      })
+    );
+  };
+
+  addComment = async article_id => {
+    const { body, username } = this.state;
+    api.addComment(article_id, username, body).then(comment => {
+      alert("Thanks, your comment has been posted!");
+      const postedComment = { ...comment, author: comment.username };
+      this.setState({ comments: [...this.state.comments, postedComment] });
     });
   };
 }
