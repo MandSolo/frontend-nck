@@ -20,7 +20,7 @@ a:visited {
 
 .Navbar a:hover,
 a:active {
-  color: white;
-  background-color: #70204c;
+  color: #6e6e6e;
+  background-color: white;
   border-radius: 10px;
 }
