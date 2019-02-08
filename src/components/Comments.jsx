@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import * as api from "../Api";
+import * as api from "../api";
 import "../styling/Comments.css";
 import moment from "moment";
 
@@ -83,7 +83,6 @@ class Comments extends Component {
     const { body } = this.state;
     const { username } = this.props;
     api.addComment(article_id, username, body).then(comment => {
-      console.log(comment);
       alert("Thanks, your comment has been posted!");
       const postedComment = { ...comment, author: comment.username };
       this.setState({ comments: [...this.state.comments, postedComment] });

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import * as api from "../Api";
+import * as api from "../api";
 import Loading from "./Loading";
 import AddVote from "./AddVote";
 import Comments from "./Comments";
@@ -54,9 +54,7 @@ class SingleArticle extends Component {
   }
 
   fetchArticle = () => {
-    console.log(this.props);
     api.getArticleById(this.props.article_id).then(article => {
-      console.log(article);
       this.setState({ article, isLoading: false });
     });
   };

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "@reach/router";
-import * as api from "../Api";
+import * as api from "../api";
 import Loading from "./Loading";
 import "../styling/SingleTopic.css";
 import moment from "moment";

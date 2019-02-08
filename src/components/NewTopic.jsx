@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import * as api from "../Api";
+import * as api from "../api";
 import { navigate } from "@reach/router";
 import "../styling/NewTopic.css";
 import "../App.css";

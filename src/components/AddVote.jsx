@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import * as api from "../Api";
+import * as api from "../api";
 import "../styling/AddVote.css";
 
 class AddVote extends Component {
@@ -39,7 +39,7 @@ class AddVote extends Component {
   vote = inc => {
     const { article_id } = this.props;
     api.vote(article_id, inc).catch(err => {
-      this.setState(state =>console.log(inc, state.voteChange ) ||  ({ voteChange: state.voteChange - inc }));
+      this.setState(state => ({ voteChange: state.voteChange - inc }));
     });
     this.setState(state => ({ voteChange: state.voteChange + inc }));
   };

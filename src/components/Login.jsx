@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import * as api from "../Api";
+import * as api from "../api";
 import "../styling/Login.css";
 
 class Login extends Component {
@@ -49,7 +49,6 @@ class Login extends Component {
   };
 
   handleSubmit = event => {
-    console.log(this.state.username);
     event.preventDefault();
     this.props.login(this.state.username);
     this.setState({

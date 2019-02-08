@@ -8,3 +8,19 @@
     border-radius: 10px;
     opacity: 0.9;
 }
+
+
+.Title a:link,
+a:visited {
+  color: white;
+  text-align: center;
+  text-decoration: none;
+}
+
+.Title a:hover,
+a:active {
+  color: black;
+  background-color: white;
+  border-radius: 10px;
+  text-align: center;
+}

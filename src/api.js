@@ -19,7 +19,6 @@ export const getUsers = async () => {
 
 export const getUserByUsername = async username => {
   const { data } = await axios.get(`${BASE_URL}/users/${username}`);
-  console.log(username);
   return data.user;
 };
 

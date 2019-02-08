@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "@reach/router";
 import NewTopic from "./NewTopic";
-import * as api from "../Api";
+import * as api from "../api";
 import Loading from "./Loading";
 import "../styling/Topics.css";
 
