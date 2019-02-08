@@ -4,10 +4,19 @@
     color: white;
     margin: 5px;
     padding: 1px;
-    border-radius: 5px;
+    border-radius: 10px;
+}
+
+.Individual-comment {
+    border-style: dotted;
+ border-color: #6e6e6e;
+    border-width: 1px;
+    border-radius: 10px;
+    margin: 5px;
 }
 
 .New-body {
+
     width: 70%;
     height: 80px;
   }

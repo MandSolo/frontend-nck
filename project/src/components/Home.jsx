@@ -6,7 +6,7 @@ class Home extends Component {
   render() {
     return (
       <div className="Home">
-        <h1>Welcome to MC News</h1>
+        <h1>Welcome to M C News</h1>
         <img src={fakenews} alt="Fake News" width="300px"/>
         <p>Please log in at the top of this page!</p>
       </div>

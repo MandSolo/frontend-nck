@@ -12,3 +12,8 @@ ul {
   text-align: justify;
   list-style: none;
 }
+
+
+img {
+  border-radius: 10px;
+}

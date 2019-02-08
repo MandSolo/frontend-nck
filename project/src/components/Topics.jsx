@@ -26,10 +26,11 @@ class Topics extends Component {
       <div className="Topics">
         <NewTopic path="/" className="Topics-newtopic" />
         <div className="Topics-view">
-          <h1> Topics </h1>
+          <h1>All Topics </h1>
           <p>
             {this.state.topics.map(topic => {
               return (
+                <div className="Individual-topic">
                 <ul>
                   <li>
                     Topic: <b>{topic.slug}</b>
@@ -40,7 +41,7 @@ class Topics extends Component {
                       View All Articles for {topic.slug}
                     </Link>
                   </li>
-                </ul>
+                </ul></div>
               );
             })}
           </p>

@@ -23,11 +23,12 @@ class Users extends Component {
 
     return (
       <div className="Users">
-        <h1> Users </h1>
+    <br></br>
+        <h1>All Users </h1>
         <div className="Users-container">
             {this.state.users.map(user => {
               return (
-                <ul>
+                               <ul>
                   <li>
                     <img
                       className="image is-96x96"

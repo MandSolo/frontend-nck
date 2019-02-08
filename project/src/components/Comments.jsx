@@ -17,6 +17,7 @@ class Comments extends Component {
           <p>
             {this.state.comments.map(comment => {
               return (
+                <div className="Individual-comment">
                 <ul>
                   <li>
                     Author: <b>{comment.author}</b>
@@ -24,9 +25,11 @@ class Comments extends Component {
                   <li>On: {moment(comment.created_at).format("llll")}</li>
                   <li>{comment.body}</li>
                 </ul>
+                </div>
               );
             })}
           </p>
+          
         </div>
 
         <div className="New-comment">

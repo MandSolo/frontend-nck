@@ -28,10 +28,11 @@ class Articles extends Component {
         <Filter path="/" className="Articles-filter" />
         <NewArticle path="/" className="Articles-newarticle" />
         <div className="Article-view">
-          <h1> Articles</h1>
+          <h1>All Articles</h1>
           <p>
             {this.state.articles.map(article => {
               return (
+                <div className="Individual-article">
                 <ul>
                   <li>
                     <b>{article.title}</b>
@@ -49,6 +50,7 @@ class Articles extends Component {
                     </Link>
                   </li>
                 </ul>
+                </div>
               );
             })}
           </p>
