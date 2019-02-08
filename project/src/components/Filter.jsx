@@ -33,12 +33,19 @@ class Filter extends Component {
   }
 
   handleChange = event => {
+    const { id } = event.target;
+    this.setState({
+      [id]: event.target.value
+    });
+  };
+
+  handleSubmit = event => {
     const { fetchArticles, topic } = this.props;
     const { name, value } = event.target;
     const filterValue = {
       Newest: "created_at",
       MostVotes: "votes",
-      MostComments: "comment_count&sort_ascending=true"
+      MostComments: "comment_count"
     };
 
     this.setState({ [name]: filterValue[value] }, () =>

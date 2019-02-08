@@ -39,11 +39,11 @@ class SingleArticle extends Component {
           </ul>
         </div>
 
-        <AddVote path="/" className="Article-vote" />
+        <AddVote path="/" className="Article-vote" votes={this.state.article.votes} article_id={this.state.article.article_id}/>
         <Comments
           path="/"
           className="Article-comments"
-          article_id={this.props.article_id}
+          article_id={this.props.article_id} username={this.props.username} 
         />
       </div>
     );

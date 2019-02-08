@@ -36,7 +36,7 @@ class App extends Component {
           <Articles path="/articles" className="Articles" />
           <SingleArticle
             path="/articles/:article_id"
-            className="SingleArticle"
+            className="SingleArticle" username={this.state.user.username} 
           />
           <Topics path="/topics" className="Topics" />
           <SingleTopic path="/topics/:topic" className="SingleTopic" />

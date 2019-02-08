@@ -10,6 +10,7 @@ class AddVote extends Component {
   render() {
     const { votes } = this.props;
     const { voteChange } = this.state;
+    
     return (
       <div className="AddVote">
         <h1>Did you like this article?</h1>
@@ -18,7 +19,7 @@ class AddVote extends Component {
         </p>
         <button
           className="voteButton"
-          onClick={() => this.vote(1)}
+         onClick={( ) => this.vote(1)}
           disabled={voteChange === 1}
         >
           Vote Up
@@ -38,7 +39,7 @@ class AddVote extends Component {
   vote = inc => {
     const { article_id } = this.props;
     api.vote(article_id, inc).catch(err => {
-      this.setState(state => ({ voteChange: state.voteChange - inc }));
+      this.setState(state =>console.log(inc, state.voteChange ) ||  ({ voteChange: state.voteChange - inc }));
     });
     this.setState(state => ({ voteChange: state.voteChange + inc }));
   };

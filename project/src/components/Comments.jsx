@@ -18,18 +18,17 @@ class Comments extends Component {
             {this.state.comments.map(comment => {
               return (
                 <div className="Individual-comment">
-                <ul>
-                  <li>
-                    Author: <b>{comment.author}</b>
-                  </li>
-                  <li>On: {moment(comment.created_at).format("llll")}</li>
-                  <li>{comment.body}</li>
-                </ul>
+                  <ul>
+                    <li>
+                      Author: <b>{comment.author}</b>
+                    </li>
+                    <li>On: {moment(comment.created_at).format("llll")}</li>
+                    <li>{comment.body}</li>
+                  </ul>
                 </div>
               );
             })}
           </p>
-          
         </div>
 
         <div className="New-comment">
@@ -81,8 +80,10 @@ class Comments extends Component {
   };
 
   addComment = async article_id => {
-    const { body, username } = this.state;
+    const { body } = this.state;
+    const { username } = this.props;
     api.addComment(article_id, username, body).then(comment => {
+      console.log(comment);
       alert("Thanks, your comment has been posted!");
       const postedComment = { ...comment, author: comment.username };
       this.setState({ comments: [...this.state.comments, postedComment] });

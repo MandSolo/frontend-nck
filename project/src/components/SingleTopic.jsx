@@ -28,23 +28,25 @@ class SingleTopic extends Component {
           <p>
             {this.state.articles.map(article => {
               return (
-                <ul>
-                  <li>
-                    <b>{article.title}</b>
-                  </li>
-                  <li>Written By: {article.author}</li>
-                  <li>
-                    Created:
-                    {moment(article.created_at)
-                      .startOf("hour")
-                      .fromNow()}
-                  </li>
-                  <li>
-                    <Link to={`/articles/${article.article_id}`}>
-                      Click here to read
-                    </Link>
-                  </li>
-                </ul>
+                <div className="Individual-article-by-topic">
+                  <ul>
+                    <li>
+                      <b>{article.title}</b>
+                    </li>
+                    <li>Written By: {article.author}</li>
+                    <li>
+                      Created:
+                      {moment(article.created_at)
+                        .startOf("hour")
+                        .fromNow()}
+                    </li>
+                    <li>
+                      <Link to={`/articles/${article.article_id}`}>
+                        Click here to read
+                      </Link>
+                    </li>
+                  </ul>
+                </div>
               );
             })}
           </p>
@@ -58,7 +60,7 @@ class SingleTopic extends Component {
   }
 
   fetchArticlesByTopic = () => {
-    api.getArticlesByTopic().then(articles => {
+    api.getArticlesByTopic(this.props.topic).then(articles => {
       this.setState({ articles, isLoading: false });
     });
   };
