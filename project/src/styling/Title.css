@@ -1,9 +1,10 @@
 .Title {
-    font-family: 'Fredoka One', cursive;
-    font-size: 18px;
+    font-family: 'Coiny', cursive;
+    font-size: 25px;
     background-color: black;
     color: white;
-    margin: 0px;
-    padding: 0.7em;
+    margin: 10px;
+    padding: 5px;
+    border-radius: 10px;
     opacity: 0.9;
 }

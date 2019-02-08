@@ -1,21 +1,21 @@
 .Navbar {
-  font-family: 'Fredoka One', cursive;
-    font-size: 40px;
-    background-color: #6e6e6e;
-    opacity: 0.9;
-    color: white;
-    margin: 0px;
-    padding: 6px;
+  font-family: 'Coiny', cursive;
+  font-size: 40px;
+  background-color: #6e6e6e;
+  opacity: 0.9;
+  color: white;
+  text-align: center;
+  margin: 10px;
+  padding: 20px;
+  border-radius: 10px;
 }
 
 .Navbar a:link,
 a:visited {
-  background-color:   #6e6e6e;
+  background-color: #6e6e6e;
   color: white;
-  padding: 0px 0px;
   text-align: center;
   text-decoration: none;
-  display: inline-block;
 }
 
 .Navbar a:hover,
@@ -23,4 +23,5 @@ a:active {
   color: #6e6e6e;
   background-color: white;
   border-radius: 10px;
+  text-align: center;
 }
