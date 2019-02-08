@@ -18,7 +18,7 @@ class Filter extends Component {
               onChange={this.handleChange}
               required
             >
-              <option value="Newest">Newest</option>
+              <option value="Newest">Newest Articles</option>
               <option value="MostVotes">Most Votes</option>
               <option value="MostComments">Most Comments</option>
             </select>
