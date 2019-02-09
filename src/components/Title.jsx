@@ -6,8 +6,7 @@ class Title extends Component {
   render() {
     return (
       <div className="Title">
-      <h1> <Link to="/">M C N </Link> </h1>
-        <p>Mand Cashin News</p>
+      <h1> <Link to="/">Mand Cashin News </Link> </h1>
       </div>
     );
   }

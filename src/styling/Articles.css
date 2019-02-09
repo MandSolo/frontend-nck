@@ -1,23 +1,21 @@
 .Articles {
-  font-family: 'Thasadith', sans-serif;
+  font-family: "Thasadith", sans-serif;
   background-color: #ffffff;
   color: black;
   opacity: 0.9;
   margin: 10px;
   padding: 0px;
   border-radius: 10px;
-
 }
 
 .Articles a {
-color: black;
+  color: black;
 }
 
 .Individual-article {
   border-style: dotted;
   border-color: #6e6e6e;
-     border-width: 1px;
-     border-radius: 10px;
-     margin: 5px;
- }
-
+  border-width: 1px;
+  border-radius: 10px;
+  margin: 5px;
+}

@@ -14,9 +14,9 @@ class SingleTopic extends Component {
   render() {
     if (this.state.isLoading) {
       return (
-        <div className="Loading-page">
-          <Loading path="/" className="Loading-gif" />
-        </div>
+      
+          <Loading path="/"  />
+        
       );
     }
     return (

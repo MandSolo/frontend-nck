@@ -16,40 +16,36 @@ class Articles extends Component {
 
   render() {
     if (this.state.isLoading) {
-      return (
-        <div className="Loading-page">
-          <Loading path="/" className="Loading-gif" />
-        </div>
-      );
+      return <Loading path="/" />;
     }
 
     return (
       <div className="Articles">
-        <Filter path="/" className="Articles-filter" />
-        <NewArticle path="/" className="Articles-newarticle" />
+        <Filter path="/" />
+        <NewArticle path="/" />
         <div className="Article-view">
           <h1>All Articles</h1>
           <p>
             {this.state.articles.map(article => {
               return (
                 <div className="Individual-article">
-                <ul>
-                  <li>
-                    <b>{article.title}</b>
-                  </li>
-                  <li>Written By: {article.author}</li>
-                  <li>
-                    Created:
-                    {moment(article.created_at)
-                      .startOf("hour")
-                      .fromNow()}
-                  </li>
-                  <li>
-                    <Link to={`/articles/${article.article_id}`}>
-                      Click here to read
-                    </Link>
-                  </li>
-                </ul>
+                  <ul>
+                    <li>
+                      <b>{article.title}</b>
+                    </li>
+                    <li>Written By: {article.author}</li>
+                    <li>
+                      Created:
+                      {moment(article.created_at)
+                        .startOf("hour")
+                        .fromNow()}
+                    </li>
+                    <li>
+                      <Link to={`/articles/${article.article_id}`}>
+                        Click here to read
+                      </Link>
+                    </li>
+                  </ul>
                 </div>
               );
             })}

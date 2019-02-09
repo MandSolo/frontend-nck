@@ -15,9 +15,9 @@ class SingleArticle extends Component {
   render() {
     if (this.state.isLoading) {
       return (
-        <div className="Loading-page">
-          <Loading path="/" className="Loading-gif" />
-        </div>
+     
+          <Loading path="/"  />
+
       );
     }
 
@@ -39,11 +39,10 @@ class SingleArticle extends Component {
           </ul>
         </div>
 
-        <AddVote path="/" className="Article-vote" votes={this.state.article.votes} article_id={this.state.article.article_id}/>
+        <AddVote path="/" votes={this.state.article.votes} article_id={this.state.article.article_id}/>
         <Comments
           path="/"
-          className="Article-comments"
-          article_id={this.props.article_id} username={this.props.username} 
+            article_id={this.props.article_id} username={this.props.username} 
         />
       </div>
     );

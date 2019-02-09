@@ -13,10 +13,9 @@ class SingleUser extends Component {
    
     if (this.state.isLoading) {
       return (
-        <div className="Loading-page">
-          <Loading path="/" className="Loading-gif" />
-        </div>
-      );
+       
+          <Loading path="/" />)
+       
     }
 
     return (
@@ -27,7 +26,7 @@ class SingleUser extends Component {
           <ul>
             <li>
               <img
-                className="image is-96x96"
+                className="avatar"
                 src={this.state.user.avatar_url}
                 alt="User Avatar"
               />

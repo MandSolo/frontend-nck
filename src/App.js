@@ -21,34 +21,26 @@ class App extends Component {
   render() {
     return (
       <div className="App-container">
-        <div className="App-title">
-          <Title />
-        </div>
-        <div className="App-login">
-          <Login login={this.login} username={this.state.user.username} />
-        </div>
-        <div className="App-navbar">
-          <Navbar />
-        </div>
+        <Title />
+        <Login login={this.login} username={this.state.user.username} />
+
+        <Navbar />
 
         <Router className="App-router">
-          <Home path="/" className="Home" />
-          <Articles path="/articles" className="Articles" />
+          <Home path="/" />
+          <Articles path="/articles" />
           <SingleArticle
             path="/articles/:article_id"
-            className="SingleArticle"
             username={this.state.user.username}
           />
-          <Topics path="/topics" className="Topics" />
-          <SingleTopic path="/topics/:topic" className="SingleTopic" />
-          <Users path="/users" className="Users" />
-          <SingleUser path="/users/:username" className="SingleUser" />
+          <Topics path="/topics" />
+          <SingleTopic path="/topics/:topic" />
+          <Users path="/users" />
+          <SingleUser path="/users/:username" />
           <NotFound default />
         </Router>
 
-        <div className="App-footer">
-          <Footer />
-        </div>
+        <Footer />
       </div>
     );
   }

@@ -13,9 +13,9 @@ class Users extends Component {
   render() {
     if (this.state.isLoading) {
       return (
-        <div className="Loading-page">
-          <Loading path="/" className="Loading-gif" />
-        </div>
+        
+          <Loading path="/"  />
+        
       );
     }
 
@@ -26,10 +26,11 @@ class Users extends Component {
         <div className="Users-container">
           {this.state.users.map(user => {
             return (
+              <div className="Individual-user">
               <ul>
                 <li>
                   <img
-                    className="image is-96x96"
+                    className="avatar"
                     src={user.avatar_url}
                     alt="User Avatar"
                   />
@@ -41,6 +42,7 @@ class Users extends Component {
                   <Link to={`/users/${user.username}`}>View Profile</Link>
                 </li>
               </ul>
+              </div>
             );
           })}
         </div>

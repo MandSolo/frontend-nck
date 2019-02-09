@@ -7,7 +7,7 @@ class NotFound extends Component {
   render() {
     return (
       <div className="NotFound">
-        <img src={ohdear} alt="Oh Dear" width="300px" />
+        <img src={ohdear} alt="Oh Dear" />
         <p>
           You appear to have gotten lost. You can return to the home page by
           clicking <Link to="/">here!</Link>
