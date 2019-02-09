@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Link } from "@reach/router";
 import * as api from "../api";
 import Loading from "./Loading";
+import NewArticle from "./NewArticle";
 import "../styling/SingleTopic.css";
 import moment from "moment";
 
@@ -13,11 +14,7 @@ class SingleTopic extends Component {
 
   render() {
     if (this.state.isLoading) {
-      return (
-      
-          <Loading path="/"  />
-        
-      );
+      return <Loading path="/" />;
     }
     return (
       <div className="SingleTopic">
@@ -51,6 +48,8 @@ class SingleTopic extends Component {
             })}
           </p>
         </div>
+        <NewArticle path="/" className="New-article-by-topic" />
+        <br />
       </div>
     );
   }

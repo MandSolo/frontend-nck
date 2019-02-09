@@ -1,9 +1,9 @@
-import React, { Component } from "react";
+import React from "react";
 import loading from "../images/loading.gif";
 import "../styling/Loading.css";
 
-class Loading extends Component {
-  render() {
+const Loading = () => {
+
     return (
       <div className="Loading">
         <img src={loading} alt="Loading" />
@@ -11,5 +11,5 @@ class Loading extends Component {
       </div>
     );
   }
-}
+
 export default Loading;

@@ -1,9 +1,8 @@
-import React, { Component } from "react";
+import React from "react";
 import { Link } from "@reach/router";
 import "../styling/Navbar.css";
 
-class Navbar extends Component {
-  render() {
+const Navbar = () => {
     return (
       <div className="Navbar">
         <Link to="/">Home</Link>
@@ -17,6 +16,5 @@ class Navbar extends Component {
       </div>
     );
   }
-}
 
 export default Navbar;

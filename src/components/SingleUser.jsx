@@ -20,8 +20,9 @@ class SingleUser extends Component {
 
     return (
       <div className="SingleUser">
+      <br></br>
         <p>
-          <h1><b>{this.state.user.username}</b></h1>
+          <h1>User Profile: <b>{this.state.user.username}</b></h1>
 
           <ul>
             <li>

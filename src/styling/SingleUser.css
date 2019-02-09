@@ -8,8 +8,8 @@
   border-radius: 10px;
 }
 
-ul {
-  text-align: justify;
+.SingleUser ul {
+  text-align: center;
   list-style: none;
 }
 

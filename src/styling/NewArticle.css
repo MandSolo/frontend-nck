@@ -1,6 +1,6 @@
 .NewArticle {
-  font-family: 'Thasadith', sans-serif;
-  background-color: #1C053A;
+  font-family: "Thasadith", sans-serif;
+  background-color: #1c053a;
   color: white;
   margin: 5px;
   padding: 1px;
@@ -18,4 +18,8 @@
 .New-body {
   width: 70%;
   height: 200px;
+}
+
+.NewArticle a {
+  color: white;
 }

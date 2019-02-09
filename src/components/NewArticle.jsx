@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "@reach/router";
 import * as api from "../api";
 import { navigate } from "@reach/router";
 import "../styling/NewArticle.css";
@@ -55,6 +56,11 @@ class NewArticle extends Component {
             Add Article
           </button>
         </form>
+
+        <p>
+          If you want to write an article about anything else, please{" "}
+          <Link to="/topics">click here</Link> to create a new topic first.
+        </p>
       </div>
     );
   }

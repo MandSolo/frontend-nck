@@ -1,10 +1,9 @@
-import React, {Component } from "react";
+import React from "react";
 import { Link } from "@reach/router";
 import ohdear from "../images/ohdear.png";
 import "../styling/NotFound.css";
 
-class NotFound extends Component {
-  render() {
+const NotFound = () => {
     return (
       <div className="NotFound">
         <img src={ohdear} alt="Oh Dear" />
@@ -15,5 +14,5 @@ class NotFound extends Component {
       </div>
     );
   }
-}
+
 export default NotFound;

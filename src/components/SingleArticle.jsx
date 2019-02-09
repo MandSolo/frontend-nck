@@ -14,11 +14,7 @@ class SingleArticle extends Component {
 
   render() {
     if (this.state.isLoading) {
-      return (
-     
-          <Loading path="/"  />
-
-      );
+      return <Loading path="/" />;
     }
 
     return (
@@ -27,8 +23,9 @@ class SingleArticle extends Component {
           <h1>
             <b>{this.state.article.title}</b>
           </h1>
-          <p> {this.state.article.body}</p>
           <ul>
+            <li> {this.state.article.body}</li>
+
             <li>Written By: {this.state.article.author}</li>
             <li>
               Created:
@@ -39,10 +36,15 @@ class SingleArticle extends Component {
           </ul>
         </div>
 
-        <AddVote path="/" votes={this.state.article.votes} article_id={this.state.article.article_id}/>
+        <AddVote
+          path="/"
+          votes={this.state.article.votes}
+          article_id={this.state.article.article_id}
+        />
         <Comments
           path="/"
-            article_id={this.props.article_id} username={this.props.username} 
+          article_id={this.props.article_id}
+          username={this.props.username}
         />
       </div>
     );

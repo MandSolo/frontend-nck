@@ -17,7 +17,8 @@ class Login extends Component {
     return loggedIn ? (
       <div className="Logged-in">
         <p>Hello {this.props.username},</p>
-        <p> Welcome back! </p>
+        <p> Welcome back to M C News! </p>
+        <p>Please stay logged in to maximise your experience.</p>
       </div>
     ) : (
       <div className="Login">

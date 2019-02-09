@@ -8,6 +8,7 @@
 }
 
 .Individual-comment {
+    text-align: justify;
     border-style: dotted;
  border-color: #6e6e6e;
     border-width: 1px;
