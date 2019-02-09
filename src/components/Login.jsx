@@ -18,7 +18,9 @@ class Login extends Component {
       <div className="Logged-in">
         <p>Hello {this.props.username},</p>
         <p> Welcome back to M C News! </p>
-        <p>Please stay logged in to maximise your experience.</p>
+        <div className="logout">
+        <button onClick={this.handleLogout}>Logout</button>
+        </div>
       </div>
     ) : (
       <div className="Login">
@@ -40,6 +42,10 @@ class Login extends Component {
 
   componentDidMount() {
     this.fetchUsers();
+  }
+
+  handleLogout = () => {
+    window.location.reload();
   }
 
   handleChange = event => {
