@@ -24,6 +24,16 @@ class Comments extends Component {
                     </li>
                     <li>On: {moment(comment.created_at).format("llll")}</li>
                     <li>{comment.body}</li>
+                    <li>
+                      {this.state.username === comment.username && (
+                        <button
+                          onClick={() => this.handleDelete(comment.comment_id)}
+                         hidden={this.props.username !== comment.author}
+                        >
+                          Delete Comment
+                        </button>
+                      )}
+                    </li>
                   </ul>
                 </div>
               );
@@ -67,7 +77,7 @@ class Comments extends Component {
     const { id, value } = event.target;
     this.setState({
       [id]: event.target.value,
-      body: value,
+      body: value
     });
   };
 
@@ -80,6 +90,20 @@ class Comments extends Component {
       })
     );
   };
+
+  handleDelete(comment_id) {
+    const { article_id } = this.props;
+    api
+      .deleteComment(article_id, comment_id)
+      .then(() => {
+        alert("Comment deleted!");
+        this.setState(prevState => ({
+          comments: prevState.comments.filter(
+            comment => comment.comment_id !== comment_id
+          )
+        }));
+      })
+  }
 
   addComment = async article_id => {
     const { body } = this.state;

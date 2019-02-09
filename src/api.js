@@ -73,3 +73,10 @@ export const addTopic = async (slug, description) => {
   });
   return data.topic[0];
 };
+
+export const deleteComment = async (article_id, comment_id) => {
+  const { data } = await axios.delete(
+    `${BASE_URL}/articles/${article_id}/comments/${comment_id}`
+  );
+  return data.comment;
+};

@@ -9,5 +9,3 @@ filter only sorts articles on the page - look into pagination or infinite scroll
 ## EXTRA IF TIME PERMITS
 
 can i make a vote up/down feature for the comments?
-
-make a delete function for the articles and comments written by logged in user.

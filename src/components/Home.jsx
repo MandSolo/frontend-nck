@@ -12,7 +12,7 @@ const Home = () => {
       <p>Non-users can view and vote on existing articles only.</p>
       <p>
         Logged-in users are able to add new topics and articles. You can also
-        view and add comments on existing articles.
+        view user comments and add or remove your own comments on existing articles.
       </p>
       <p>
         <i>
