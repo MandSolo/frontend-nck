@@ -1,10 +1,11 @@
 .NewArticle {
   font-family: "Thasadith", sans-serif;
-  background-color: #1c053a;
+  background-color: #d35400;
   color: white;
   margin: 5px;
   padding: 1px;
   border-radius: 10px;
+  font-size: 30px;
 }
 
 .New-title {

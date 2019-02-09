@@ -13,7 +13,8 @@ class NewTopic extends Component {
   render() {
     return (
       <div className="NewTopic">
-        <h1>Add A New Topic</h1>
+        <h1>There's more to life than football and cooking...</h1>
+        <p>Branch out and add a new topic.</p>
         <form onSubmit={this.handleSubmit}>
           <input
             className="New-slug"

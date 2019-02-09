@@ -18,7 +18,10 @@ class NewArticle extends Component {
 
     return (
       <div className="NewArticle">
-        <h2>Compose New Article</h2>
+        <h2>Got News?</h2>
+        <p>
+          Compose your own article.
+        </p>
         <form onSubmit={this.handleSubmit}>
           <input
             className="New-title"
@@ -58,7 +61,7 @@ class NewArticle extends Component {
         </form>
 
         <p>
-          If you want to write an article about anything else, please{" "}
+          If you want to write about anything else, please{" "}
           <Link to="/topics">click here</Link> to create a new topic first.
         </p>
       </div>
@@ -82,6 +85,7 @@ class NewArticle extends Component {
     const { title, body, username, topic } = this.state;
     event.preventDefault();
     api.addArticle(title, body, username, topic).then(() => {
+      alert("Article added successfully!");
       this.setState({
         title: "",
         body: "",

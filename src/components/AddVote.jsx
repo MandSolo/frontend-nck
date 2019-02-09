@@ -13,7 +13,8 @@ class AddVote extends Component {
 
     return (
       <div className="AddVote">
-        <h1>Did you like this article?</h1>
+        <h1>Scintillating read?</h1>
+        <p>Let the world know how strongly you feel by getting your vote on.</p>
         <p>
           <b> Current Votes:</b> {votes + voteChange}
         </p>
@@ -24,9 +25,7 @@ class AddVote extends Component {
         >
           VOTE UP ⬆
         </button>
-        <br />
-        <b> Or </b>
-        <br />
+    
         <button
           className="voteButton"
           onClick={() => this.vote(-1)}

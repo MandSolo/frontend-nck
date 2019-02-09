@@ -5,7 +5,7 @@ import "../styling/Home.css";
 const Home = () => {
   return (
     <div className="Home">
-      <img src={fakenews} alt="Fake News" />
+      <img src={fakenews} alt="Fake News" width="40%"/>
       <p>
         Welcome to M C News! Please remember to log in at the top of this page.
       </p>
