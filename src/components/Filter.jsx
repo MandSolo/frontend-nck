@@ -10,7 +10,7 @@ class Filter extends Component {
   render() {
     return (
       <div className="Filter">
-        <h1>Sort It Out!</h1>
+        <h2>Sort It Out!</h2>
         <p>Want to see only the latest articles? Want to know which articles are trending now?</p>
         <div className="SortOptions">
           <form onSubmit={this.handleSubmit}>

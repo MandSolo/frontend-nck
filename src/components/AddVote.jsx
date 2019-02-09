@@ -13,7 +13,7 @@ class AddVote extends Component {
 
     return (
       <div className="AddVote">
-        <h1>Scintillating read?</h1>
+        <h3>Scintillating read?</h3>
         <p>Let the world know how strongly you feel by getting your vote on.</p>
         <p>
           <b> Current Votes:</b> {votes + voteChange}

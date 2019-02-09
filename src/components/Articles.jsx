@@ -23,7 +23,7 @@ class Articles extends Component {
     return (
       <div className="Articles">
         <Filter path="/" sortArticlesBy={this.sortArticlesBy} />
-        {this.props.username && <NewArticle path="/" />}
+    {this.props.username && <NewArticle path="/" />} {<p>Only logged in users can add an article!</p>}
         <div className="Article-view">
           <h1>All Articles</h1>
           <p>
@@ -31,21 +31,17 @@ class Articles extends Component {
               return (
                 <div className="Individual-article">
                   <ul>
-                    <li>
-                      <b>{article.title}</b>
+                    <li> <Link to={`/articles/${article.article_id}`}>
+                      <b>{article.title}</b></Link>
                     </li>
-                    <li>Written By: {article.author}</li>
+                    <li>Written By:  <Link to={`/users/${article.author}`}>{article.author} </Link> </li>
                     <li>
                       Created:
                       {moment(article.created_at)
                         .startOf("hour")
                         .fromNow()}
                     </li>
-                    <li>
-                      <Link to={`/articles/${article.article_id}`}>
-                        Click here to read
-                      </Link>
-                    </li>
+                  
                   </ul>
                 </div>
               );

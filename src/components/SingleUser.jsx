@@ -10,21 +10,21 @@ class SingleUser extends Component {
   };
 
   render() {
-   
     if (this.state.isLoading) {
-      return (
-       
-          <Loading path="/" />)
-       
+      return <Loading path="/" />;
     }
 
     return (
       <div className="SingleUser">
-      <br></br>
+        <br />
         <p>
-          <h1>User Profile: <b>{this.state.user.username}</b></h1>
+          <h1>User Profile</h1>
 
           <ul>
+            <li>
+              {" "}
+              Username: <b>{this.state.user.username}</b>
+            </li>
             <li>
               <img
                 className="avatar"
@@ -32,9 +32,10 @@ class SingleUser extends Component {
                 alt="User Avatar"
               />
             </li>
-            <li>Name: {this.state.user.name}</li>
+            <li>Full Name: {this.state.user.name}</li>
           </ul>
         </p>
+        <br></br>
       </div>
     );
   }

@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "@reach/router";
 import * as api from "../api";
 import Loading from "./Loading";
 import AddVote from "./AddVote";
@@ -26,8 +27,8 @@ class SingleArticle extends Component {
           </h1>
           <ul>
             <li> {this.state.article.body}</li>
-
-            <li>Written By: {this.state.article.author}</li>
+</ul><ul>
+            <li>Written By:  <Link to={`/users/${this.state.article.author}`}>{this.state.article.author} </Link> </li>
             <li>
               Created:
               {moment(this.state.article.created_at)
@@ -46,7 +47,7 @@ class SingleArticle extends Component {
           path="/"
           article_id={this.props.article_id}
           username={this.props.username}
-        />}
+        />} {<p>Only logged in users can view or add comments!</p>}
         
       </div>
     );

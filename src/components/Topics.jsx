@@ -24,7 +24,7 @@ class Topics extends Component {
 
     return (
       <div className="Topics">
-        {this.props.username && <NewTopic path="/" className="Topics-newtopic" />}
+        {this.props.username && <NewTopic path="/" className="Topics-newtopic" />}  {<p>Only logged in users can add topics!</p>}
         <div className="Topics-view">
           <h1>All Topics </h1>
           <p>
@@ -33,14 +33,10 @@ class Topics extends Component {
                 <div className="Individual-topic">
                 <ul>
                   <li>
-                    Topic: <b>{topic.slug}</b>
+                  <Link to={`/topics/${topic.slug}`}> <b>{topic.slug}</b></Link>
                   </li>
                   <li>About: {topic.description}</li>
-                  <li>
-                    <Link to={`/topics/${topic.slug}`}>
-                      View All Articles for {topic.slug}
-                    </Link>
-                  </li>
+                 
                 </ul></div>
               );
             })}

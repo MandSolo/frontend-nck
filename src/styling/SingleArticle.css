@@ -9,7 +9,16 @@
     
     }
     
-    ul {
+   .SingleArticle ul {
       text-align: justify;
       list-style: none;
+      border-style: dotted;
+      border-color: #6e6e6e;
+         border-width: 1px;
+         border-radius: 10px;
+         margin: 5px;
+    }
+
+    .SingleArticle a {
+      color: black;
     }

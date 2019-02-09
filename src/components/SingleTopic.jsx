@@ -28,7 +28,9 @@ class SingleTopic extends Component {
                 <div className="Individual-article-by-topic">
                   <ul>
                     <li>
-                      <b>{article.title}</b>
+                      <Link to={`/articles/${article.article_id}`}>
+                        <b>{article.title}</b>
+                      </Link>
                     </li>
                     <li>Written By: {article.author}</li>
                     <li>
@@ -37,18 +39,15 @@ class SingleTopic extends Component {
                         .startOf("hour")
                         .fromNow()}
                     </li>
-                    <li>
-                      <Link to={`/articles/${article.article_id}`}>
-                        Click here to read
-                      </Link>
-                    </li>
                   </ul>
                 </div>
               );
             })}
           </p>
         </div>
-        {this.props.username && <NewArticle path="/" className="New-article-by-topic" />}
+        {this.props.username && (
+          <NewArticle path="/" className="New-article-by-topic" />
+        )}
         <br />
       </div>
     );
