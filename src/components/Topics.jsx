@@ -24,7 +24,7 @@ class Topics extends Component {
 
     return (
       <div className="Topics">
-        <NewTopic path="/" className="Topics-newtopic" />
+        {this.props.username && <NewTopic path="/" className="Topics-newtopic" />}
         <div className="Topics-view">
           <h1>All Topics </h1>
           <p>

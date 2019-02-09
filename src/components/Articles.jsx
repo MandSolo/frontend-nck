@@ -7,6 +7,7 @@ import NewArticle from "./NewArticle";
 import "../styling/Articles.css";
 import "../App.css";
 import moment from "moment";
+import _ from "lodash";
 
 class Articles extends Component {
   state = {
@@ -21,8 +22,8 @@ class Articles extends Component {
 
     return (
       <div className="Articles">
-        <Filter path="/" />
-        <NewArticle path="/" />
+        <Filter path="/" sortArticlesBy={this.sortArticlesBy} />
+        {this.props.username && <NewArticle path="/" />}
         <div className="Article-view">
           <h1>All Articles</h1>
           <p>
@@ -60,10 +61,28 @@ class Articles extends Component {
   }
 
   fetchArticles = () => {
-    api.getArticles(this.props.article).then(articles => {
+    api.getArticles().then(articles => {
       this.setState({ articles, isLoading: false });
-    });
+    })
   };
+
+  sortArticlesBy = (filterType) => {
+    switch(filterType) {
+      case "MostComments":
+        const sortedByComment = _.orderBy(this.state.articles, ['comment_count'],['desc'])
+        this.setState({articles: sortedByComment})
+        break;
+      case "MostVotes":
+        const sortedByVotes = _.orderBy(this.state.articles, ['votes'],['desc'])
+        this.setState({articles: sortedByVotes})
+        break; 
+      case "Newest":
+        const sortedByDate = _.orderBy(this.state.articles, ['created_at'],['desc'])
+        this.setState({articles: sortedByDate})
+        break; 
+      default:
+    }
+  }
 }
 
 export default Articles;

@@ -5,6 +5,7 @@ import AddVote from "./AddVote";
 import Comments from "./Comments";
 import "../styling/SingleArticle.css";
 import moment from "moment";
+import { navigate } from "@reach/router";
 
 class SingleArticle extends Component {
   state = {
@@ -41,11 +42,12 @@ class SingleArticle extends Component {
           votes={this.state.article.votes}
           article_id={this.state.article.article_id}
         />
-        <Comments
+       {this.props.username && <Comments
           path="/"
           article_id={this.props.article_id}
           username={this.props.username}
-        />
+        />}
+        
       </div>
     );
   }
@@ -57,6 +59,8 @@ class SingleArticle extends Component {
   fetchArticle = () => {
     api.getArticleById(this.props.article_id).then(article => {
       this.setState({ article, isLoading: false });
+    }).catch(err => {
+      navigate('/notfound'); 
     });
   };
 }

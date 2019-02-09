@@ -48,7 +48,7 @@ class SingleTopic extends Component {
             })}
           </p>
         </div>
-        <NewArticle path="/" className="New-article-by-topic" />
+        {this.props.username && <NewArticle path="/" className="New-article-by-topic" />}
         <br />
       </div>
     );

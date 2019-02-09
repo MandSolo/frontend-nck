@@ -19,7 +19,7 @@ class NewTopic extends Component {
             className="New-slug"
             id="slug"
             type="text"
-            placeholder="Title Of New Topic"
+            placeholder="New Topic Title"
             value={this.state.slug}
             onChange={this.handleChange}
             required

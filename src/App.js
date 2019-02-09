@@ -28,16 +28,16 @@ class App extends Component {
 
         <Router className="App-router">
           <Home path="/" />
-          <Articles path="/articles" />
+          <Articles path="/articles" username={this.state.user.username} />
           <SingleArticle
             path="/articles/:article_id"
             username={this.state.user.username}
           />
-          <Topics path="/topics" />
-          <SingleTopic path="/topics/:topic" />
+          <Topics path="/topics" username={this.state.user.username}/>
+          <SingleTopic path="/topics/:topic" username={this.state.user.username}/>
           <Users path="/users" />
           <SingleUser path="/users/:username" />
-          <NotFound default />
+          <NotFound path="/notfound" default />
         </Router>
 
         <Footer />

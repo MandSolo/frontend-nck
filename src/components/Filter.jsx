@@ -4,13 +4,14 @@ import "../App.css";
 
 class Filter extends Component {
   state = {
-    sort_by: ""
+    filterType: "Newest"
   };
 
   render() {
     return (
       <div className="Filter">
-        <h1> Filter Articles</h1>
+        <h1>Sort Articles</h1>
+        <p>Want to see only the latest articles? Want to know which articles are trending now?</p>
         <div className="SortOptions">
           <form onSubmit={this.handleSubmit}>
             <select
@@ -24,7 +25,7 @@ class Filter extends Component {
             </select>
             <br />
             <button type="submit" className="articleButton">
-              Sort Now
+              Click To Sort
             </button>
           </form>
         </div>
@@ -33,24 +34,14 @@ class Filter extends Component {
   }
 
   handleChange = event => {
-    const { id } = event.target;
     this.setState({
-      [id]: event.target.value
+      filterType: event.target.value
     });
   };
 
   handleSubmit = event => {
-    const { fetchArticles, topic } = this.props;
-    const { name, value } = event.target;
-    const filterValue = {
-      Newest: "created_at",
-      MostVotes: "votes",
-      MostComments: "comment_count"
-    };
-
-    this.setState({ [name]: filterValue[value] }, () =>
-      fetchArticles(topic, this.state.sort_by)
-    );
+    event.preventDefault()
+    this.props.sortArticlesBy(this.state.filterType)
   };
 }
 

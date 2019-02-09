@@ -32,11 +32,11 @@ class Comments extends Component {
         </div>
 
         <div className="New-comment">
-          <h2>Add Your Comment</h2>
+          <h2>Want to share your thoughts?</h2>
           <form onSubmit={this.handleSubmit}>
             <textarea
-              className="New-body"
-              id="body"
+              className="New-comment-body"
+              id="comment-body"
               type="text"
               placeholder="Write your comment here..."
               value={this.state.body}
@@ -64,11 +64,13 @@ class Comments extends Component {
   };
 
   handleChange = event => {
-    const { id } = event.target;
+    const { id, value } = event.target;
     this.setState({
-      [id]: event.target.value
+      [id]: event.target.value,
+      body: value,
     });
   };
+
   handleSubmit = event => {
     const { article_id } = this.props;
     event.preventDefault();

@@ -8,16 +8,16 @@
 }
 
 .New-title {
-  width: 70%;
+  width: 80%;
 }
 
 .Select-topic {
-  width: 70%;
+  width: 80%;
 }
 
 .New-body {
-  width: 70%;
-  height: 200px;
+  width: 80%;
+  height: 500px;
 }
 
 .NewArticle a {
