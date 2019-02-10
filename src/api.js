@@ -80,3 +80,11 @@ export const deleteComment = async (article_id, comment_id) => {
   );
   return data.comment;
 };
+
+export const changeArticlePage = async (page, TOPIC) => {
+  const URL = TOPIC
+    ? `${BASE_URL}/topics/${TOPIC}/articles?p=${page}`
+    : `${BASE_URL}/articles?p=${page}`;
+  const { data } = await axios.get(URL);
+  return data.articles;
+};

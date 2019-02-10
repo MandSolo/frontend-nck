@@ -12,10 +12,14 @@ import _ from "lodash";
 class Articles extends Component {
   state = {
     articles: [],
-    isLoading: true
+    isLoading: true,
+    page: 1
   };
 
   render() {
+
+    const { articles, page } = this.state;
+
     if (this.state.isLoading) {
       return <Loading path="/" />;
     }
@@ -44,15 +48,42 @@ class Articles extends Component {
                   
                   </ul>
                 </div>
+
+
               );
             })}
-          </p>
+       
+          {page > 1 && (
+            <button
+              className="buttonDown"
+              onClick={this.pageDown}
+            >
+              Previous Page
+            </button>
+          )}
+          {articles.length === 10 && (
+            <button
+              className="buttonUp"
+              onClick={this.pageUp}
+            >
+              Next Page
+            </button>
+          )}
+
+</p>
+
+
         </div>
+
+
       </div>
     );
   }
 
   componentDidMount() {
+    this.state.page > 1
+    ? this.pagginate()
+    :
     this.fetchArticles();
   }
 
@@ -79,6 +110,27 @@ class Articles extends Component {
       default:
     }
   }
+
+  pagginate = () => {
+    api
+      .changeArticlePage(this.state.page, this.props.topic)
+      .then(articles => this.setState({ articles }));
+  };
+
+  pageDown = () => {
+    this.setState({ page: this.state.page - 1 }, () => {
+      this.pagginate();
+    });
+  };
+
+  pageUp = () => {
+    this.setState({ page: this.state.page + 1 }, () => {
+      this.pagginate();
+    });
+  };
+
+
+
 }
 
 export default Articles;
