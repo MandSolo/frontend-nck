@@ -45,10 +45,10 @@ npm start
 
 Mand Cashin - www.githun.co.uk
 
-# License
+## License
 
 Northcoders
 
-#Acknowledgements 
+## Acknowledgements 
 
 Northcoders Tutors
