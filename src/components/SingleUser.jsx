@@ -35,7 +35,7 @@ class SingleUser extends Component {
             <li>Full Name: {this.state.user.name}</li>
           </ul>
         </p>
-        <br></br>
+        <br />
       </div>
     );
   }

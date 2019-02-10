@@ -19,9 +19,7 @@ class NewArticle extends Component {
     return (
       <div className="NewArticle">
         <h2>Got News?</h2>
-        <p>
-          Compose your own article.
-        </p>
+        <p>Compose your own article.</p>
         <form onSubmit={this.handleSubmit}>
           <input
             className="New-title"
@@ -46,7 +44,7 @@ class NewArticle extends Component {
           </select>
           <br />
           <textarea
-            className="New-body"
+            className="New-article-body"
             id="body"
             type="text"
             placeholder="Write your article here..."

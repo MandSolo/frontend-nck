@@ -12,32 +12,32 @@ class Topics extends Component {
   };
 
   render() {
-
     if (this.state.isLoading) {
-      return (
-        
-          <Loading path="/"  />
-        
-      );
+      return <Loading path="/" />;
     }
-
 
     return (
       <div className="Topics">
-        {this.props.username && <NewTopic path="/" className="Topics-newtopic" />}  {<p>Only logged in users can add topics!</p>}
+        {this.props.username && (
+          <NewTopic path="/" className="Topics-newtopic" />
+        )}{" "}
+        {<p>Only logged in users can add topics!</p>}
         <div className="Topics-view">
           <h1>All Topics </h1>
           <p>
             {this.state.topics.map(topic => {
               return (
                 <div className="Individual-topic">
-                <ul>
-                  <li>
-                  <Link to={`/topics/${topic.slug}`}> <b>{topic.slug}</b></Link>
-                  </li>
-                  <li>About: {topic.description}</li>
-                 
-                </ul></div>
+                  <ul>
+                    <li>
+                      <Link to={`/topics/${topic.slug}`}>
+                        {" "}
+                        <b>{topic.slug}</b>
+                      </Link>
+                    </li>
+                    <li>About: {topic.description}</li>
+                  </ul>
+                </div>
               );
             })}
           </p>

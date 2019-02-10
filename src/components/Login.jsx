@@ -19,7 +19,7 @@ class Login extends Component {
         <p>Hello {this.props.username},</p>
         <p> Welcome back to M C News! </p>
         <div className="logout">
-        <button onClick={this.handleLogout}>Logout</button>
+          <button onClick={this.handleLogout}>Logout</button>
         </div>
       </div>
     ) : (
@@ -46,7 +46,7 @@ class Login extends Component {
 
   handleLogout = () => {
     window.location.reload();
-  }
+  };
 
   handleChange = event => {
     const { value } = event.target;

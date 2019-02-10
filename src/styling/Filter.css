@@ -1,9 +1,13 @@
 .Filter {
-    font-family: 'Thasadith', sans-serif;
-    background-color: #e67e22;
-    color: white;
-    margin: 5px;
-    padding: 1px;
-    border-radius: 10px;
-    font-size: 30px;
+  font-family: "Thasadith", sans-serif;
+  background-color: #e67e22;
+  color: white;
+  margin: 5px;
+  padding: 1px;
+  border-radius: 10px;
+  font-size: 30px;
+}
+
+.Select-filter {
+  width: 80%;
 }

@@ -3,18 +3,18 @@ import { Link } from "@reach/router";
 import "../styling/Navbar.css";
 
 const Navbar = () => {
-    return (
-      <div className="Navbar">
-        <Link to="/">Home</Link>
-        {" . "}
-        <Link to="/articles">Articles</Link>
-        {" 	. "}
-        <Link to="/topics">Topics</Link>
-        {" 	. "}
-        <Link to="/users">Users</Link>
-        {" 	. "}
-      </div>
-    );
-  }
+  return (
+    <nav className="Navbar">
+      <Link to="/">Home</Link>
+      {" . "}
+      <Link to="/articles">Articles</Link>
+      {" 	. "}
+      <Link to="/topics">Topics</Link>
+      {" 	. "}
+      <Link to="/users">Users</Link>
+      {" 	. "}
+    </nav>
+  );
+};
 
 export default Navbar;

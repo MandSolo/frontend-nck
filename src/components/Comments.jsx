@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "@reach/router";
 import * as api from "../api";
 import "../styling/Comments.css";
 import moment from "moment";
@@ -20,15 +21,19 @@ class Comments extends Component {
                 <div className="Individual-comment">
                   <ul>
                     <li>
-                      Author: <b>{comment.author}</b>
+                      Author:{" "}
+                      <Link to={`/users/${comment.author}`}>
+                        {comment.author}{" "}
+                      </Link>
                     </li>
                     <li>On: {moment(comment.created_at).format("llll")}</li>
                     <li>{comment.body}</li>
                     <li>
                       {this.state.username === comment.username && (
                         <button
+                          className="delete-button"
                           onClick={() => this.handleDelete(comment.comment_id)}
-                         hidden={this.props.username !== comment.author}
+                          hidden={this.props.username !== comment.author}
                         >
                           Delete Comment
                         </button>
@@ -58,6 +63,7 @@ class Comments extends Component {
               Add Comment
             </button>
           </form>
+          <p />
         </div>
       </div>
     );
@@ -93,16 +99,14 @@ class Comments extends Component {
 
   handleDelete(comment_id) {
     const { article_id } = this.props;
-    api
-      .deleteComment(article_id, comment_id)
-      .then(() => {
-        alert("Comment deleted!");
-        this.setState(prevState => ({
-          comments: prevState.comments.filter(
-            comment => comment.comment_id !== comment_id
-          )
-        }));
-      })
+    api.deleteComment(article_id, comment_id).then(() => {
+      alert("Comment deleted!");
+      this.setState(prevState => ({
+        comments: prevState.comments.filter(
+          comment => comment.comment_id !== comment_id
+        )
+      }));
+    });
   }
 
   addComment = async article_id => {

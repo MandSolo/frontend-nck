@@ -27,8 +27,14 @@ class SingleArticle extends Component {
           </h1>
           <ul>
             <li> {this.state.article.body}</li>
-</ul><ul>
-            <li>Written By:  <Link to={`/users/${this.state.article.author}`}>{this.state.article.author} </Link> </li>
+          </ul>
+          <ul>
+            <li>
+              Written By:{" "}
+              <Link to={`/users/${this.state.article.author}`}>
+                {this.state.article.author}{" "}
+              </Link>{" "}
+            </li>
             <li>
               Created:
               {moment(this.state.article.created_at)
@@ -37,18 +43,19 @@ class SingleArticle extends Component {
             </li>
           </ul>
         </div>
-
         <AddVote
           path="/"
           votes={this.state.article.votes}
           article_id={this.state.article.article_id}
         />
-       {this.props.username && <Comments
-          path="/"
-          article_id={this.props.article_id}
-          username={this.props.username}
-        />} {<p>Only logged in users can view or add comments!</p>}
-        
+        {this.props.username && (
+          <Comments
+            path="/"
+            article_id={this.props.article_id}
+            username={this.props.username}
+          />
+        )}{" "}
+        {<p>Only logged in users can view or add comments!</p>}
       </div>
     );
   }
@@ -58,11 +65,14 @@ class SingleArticle extends Component {
   }
 
   fetchArticle = () => {
-    api.getArticleById(this.props.article_id).then(article => {
-      this.setState({ article, isLoading: false });
-    }).catch(err => {
-      navigate('/notfound'); 
-    });
+    api
+      .getArticleById(this.props.article_id)
+      .then(article => {
+        this.setState({ article, isLoading: false });
+      })
+      .catch(err => {
+        navigate("/notfound");
+      });
   };
 }
 

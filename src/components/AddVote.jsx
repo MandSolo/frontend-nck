@@ -25,7 +25,7 @@ class AddVote extends Component {
         >
           VOTE UP ⬆
         </button>
-    
+
         <button
           className="voteButton"
           onClick={() => this.vote(-1)}
@@ -33,6 +33,7 @@ class AddVote extends Component {
         >
           VOTE DOWN ⬇
         </button>
+        <p />
       </div>
     );
   }

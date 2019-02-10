@@ -12,11 +12,7 @@ class Users extends Component {
 
   render() {
     if (this.state.isLoading) {
-      return (
-        
-          <Loading path="/"  />
-        
-      );
+      return <Loading path="/" />;
     }
 
     return (
@@ -27,21 +23,21 @@ class Users extends Component {
           {this.state.users.map(user => {
             return (
               <div className="Individual-user">
-              <ul>
-                <li>
-                  <img
-                    className="avatar"
-                    src={user.avatar_url}
-                    alt="User Avatar"
-                  />
-                </li>
-                <li>
-                  <b>{user.username}</b>
-                </li>
-                <li>
-                  <Link to={`/users/${user.username}`}>View Profile</Link>
-                </li>
-              </ul>
+                <ul>
+                  <li>
+                    <img
+                      className="avatar"
+                      src={user.avatar_url}
+                      alt="User Avatar"
+                    />
+                  </li>
+                  <li>
+                    <b>{user.username}</b>
+                  </li>
+                  <li>
+                    <Link to={`/users/${user.username}`}>View Profile</Link>
+                  </li>
+                </ul>
               </div>
             );
           })}

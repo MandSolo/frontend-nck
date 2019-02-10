@@ -1,22 +1,26 @@
 .Comments {
-    font-family: 'Thasadith', sans-serif;
-    background-color: #d35400;
-    color: white;
-    margin: 5px;
-    padding: 1px;
-    border-radius: 10px;
+  font-family: "Thasadith", sans-serif;
+  background-color: #d35400;
+  color: white;
+  margin: 5px;
+  padding: 1px;
+  border-radius: 10px;
 }
 
-.Individual-comment {
-    text-align: justify;
-    border-style: dotted;
- border-color: #6e6e6e;
-    border-width: 1px;
-    border-radius: 10px;
-    margin: 5px;
+.Comments a {
+  color: white;
+}
+
+.Individual-comment ul {
+  text-align: justify;
+  border-style: dotted;
+  border-color: #6e6e6e;
+  border-width: 1px;
+  border-radius: 10px;
+  margin: 5px;
 }
 
 .New-comment-body {
-    width: 80%;
-    height: 100px;
-  }
+  width: 80%;
+  height: 80px;
+}

@@ -33,8 +33,11 @@ class App extends Component {
             path="/articles/:article_id"
             username={this.state.user.username}
           />
-          <Topics path="/topics" username={this.state.user.username}/>
-          <SingleTopic path="/topics/:topic" username={this.state.user.username}/>
+          <Topics path="/topics" username={this.state.user.username} />
+          <SingleTopic
+            path="/topics/:topic"
+            username={this.state.user.username}
+          />
           <Users path="/users" />
           <SingleUser path="/users/:username" />
           <NotFound path="/notfound" default />

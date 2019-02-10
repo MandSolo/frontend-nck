@@ -11,7 +11,10 @@ class Filter extends Component {
     return (
       <div className="Filter">
         <h2>Sort It Out!</h2>
-        <p>Want to see only the latest articles? Want to know which articles are trending now?</p>
+        <p>
+          Want to see only the latest articles? Want to know which articles are
+          trending now?
+        </p>
         <div className="SortOptions">
           <form onSubmit={this.handleSubmit}>
             <select
@@ -40,8 +43,8 @@ class Filter extends Component {
   };
 
   handleSubmit = event => {
-    event.preventDefault()
-    this.props.sortArticlesBy(this.state.filterType)
+    event.preventDefault();
+    this.props.sortArticlesBy(this.state.filterType);
   };
 }
 
