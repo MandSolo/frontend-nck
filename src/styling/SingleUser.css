@@ -1,5 +1,5 @@
 .SingleUser {
-  font-family: "Thasadith", sans-serif;
+  font-family: 'Roboto', sans-serif;
   background-color: #ffffff;
   color: black;
   opacity: 0.9;
@@ -12,7 +12,7 @@
   text-align: center;
   list-style: none;
   border-style: none;
-  background-color: #e67e22;
+  background-color: #FC1800;
   color: white;
   margin: 5px;
   padding: 1px;

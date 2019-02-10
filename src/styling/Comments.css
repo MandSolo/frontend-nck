@@ -1,6 +1,6 @@
 .Comments {
-  font-family: "Thasadith", sans-serif;
-  background-color: #d35400;
+  font-family: 'Roboto', sans-serif;
+  background-color: #CE1400;
   color: white;
   margin: 5px;
   padding: 1px;
@@ -13,7 +13,7 @@
 
 .Individual-comment ul {
   text-align: justify;
-  border-style: dotted;
+  border-style: dashed;
   border-color: #6e6e6e;
   border-width: 1px;
   border-radius: 10px;

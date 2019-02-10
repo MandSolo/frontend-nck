@@ -1,5 +1,5 @@
 .Topics {
-  font-family: "Thasadith", sans-serif;
+  font-family: 'Roboto', sans-serif;
   background-color: #ffffff;
   color: black;
   opacity: 0.9;
@@ -18,7 +18,7 @@ ul {
 }
 
 .Individual-topic {
-  border-style: dotted;
+  border-style: dashed;
   border-color: #6e6e6e;
   border-width: 1px;
   border-radius: 10px;

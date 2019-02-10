@@ -9,10 +9,13 @@ import moment from "moment";
 class SingleTopic extends Component {
   state = {
     articles: [],
-    isLoading: true
+    isLoading: true,
+    page: 1
   };
 
   render() {
+    const { articles, page } = this.state;
+
     if (this.state.isLoading) {
       return <Loading path="/" />;
     }
@@ -49,17 +52,46 @@ class SingleTopic extends Component {
           <NewArticle path="/" className="New-article-by-topic" />
         )}
         <br />
+
+        {page > 1 && (
+          <button className="buttonDown" onClick={this.pageDown}>
+            Previous Page
+          </button>
+        )}
+        {articles.length === 10 && (
+          <button className="buttonUp" onClick={this.pageUp}>
+            Next Page
+          </button>
+        )}
       </div>
     );
   }
 
   componentDidMount() {
-    this.fetchArticlesByTopic();
+    this.state.page > 1 ? this.pagginate() : this.fetchArticlesByTopic();
   }
 
   fetchArticlesByTopic = () => {
     api.getArticlesByTopic(this.props.topic).then(articles => {
       this.setState({ articles, isLoading: false });
+    });
+  };
+
+  pagginate = () => {
+    api
+      .changeArticlePage(this.state.page, this.props.topic)
+      .then(articles => this.setState({ articles }));
+  };
+
+  pageDown = () => {
+    this.setState({ page: this.state.page - 1 }, () => {
+      this.pagginate();
+    });
+  };
+
+  pageUp = () => {
+    this.setState({ page: this.state.page + 1 }, () => {
+      this.pagginate();
     });
   };
 }
