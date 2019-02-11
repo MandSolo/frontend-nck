@@ -19,7 +19,7 @@ NB. Some of the above actions are hidden to non-logged in users. More info on th
 ## Run Instructions
 
 ```
-git clone https://github.com/MandSolo/FE2-NC-News.git
+git clone https://github.com/MandSolo/frontend-nck.git
 npm install
 npm start
 ```
