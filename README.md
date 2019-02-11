@@ -1,7 +1,3 @@
-# THINGS TO FIX ON MONDAY - NEED TO NCHELP!!!!
-
-clicking on a newly posted article goes to error page! it doesn't display the author. maybe need to fix backend?
-
 # Mand Cashin News
 
 M C News is an online forum (inspired by reddit, WikiLeaks etc.) in which users are able to interact with user-posted articles. The front end is hosted at https://mc-news.netlify.com/.

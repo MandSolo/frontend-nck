@@ -80,9 +80,11 @@ class NewArticle extends Component {
     });
   };
   handleSubmit = event => {
-    const { title, body, username, topic } = this.state;
+    const { title, body, topic } = this.state;
+    const { username } = this.props;
     event.preventDefault();
     api.addArticle(title, body, username, topic).then(() => {
+      console.log(username);
       alert("Article added successfully!");
       this.setState({
         title: "",
