@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Router } from "@reach/router";
 import * as api from "./api";
 import "./App.css";
+import "./PhoneApp.css";
 import Title from "./components/Title";
 import Login from "./components/Login";
 import Navbar from "./components/Navbar";
