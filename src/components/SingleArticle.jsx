@@ -54,8 +54,8 @@ class SingleArticle extends Component {
             article_id={this.props.article_id}
             username={this.props.username}
           />
-        )}{" "}
-        {<p>Only logged in users can view or add comments!</p>}
+        )}
+        {!this.props.username && <p>Only logged in users can view or add comments!</p>}
       </div>
     );
   }

@@ -21,10 +21,11 @@ class SingleUser extends Component {
           <h1>User Profile</h1>
 
           <ul>
+           <br></br>
             <li>
-              {" "}
               Username: <b>{this.state.user.username}</b>
             </li>
+        <br></br>
             <li>
               <img
                 className="avatar"
@@ -32,7 +33,9 @@ class SingleUser extends Component {
                 alt="User Avatar"
               />
             </li>
+           <br></br>
             <li>Full Name: {this.state.user.name}</li>
+           <br></br>
           </ul>
         </p>
         <br />

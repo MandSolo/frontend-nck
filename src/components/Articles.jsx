@@ -26,8 +26,8 @@ class Articles extends Component {
     return (
       <div className="Articles">
         <Filter path="/" sortArticlesBy={this.sortArticlesBy} />
-        {this.props.username && <NewArticle path="/" />}{" "}
-        {<p>Only logged in users can add an article!</p>}
+        {this.props.username && <NewArticle path="/" />}
+        {!this.props.username && <p>Only logged in users can add an article!</p>}
         <div className="Article-view">
           <h1>All Articles</h1>
           <p>

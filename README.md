@@ -2,8 +2,6 @@
 
 clicking on a newly posted article goes to error page! it doesn't display the author. maybe need to fix backend?
 
-how can i make the placeholder text for logged in users dissapear?? (this bit "Only logged in users can ....." )
-
 # Mand Cashin News
 
 M C News is an online forum (inspired by reddit, WikiLeaks etc.) in which users are able to interact with user-posted articles. The front end is hosted at https://mc-news.netlify.com/.

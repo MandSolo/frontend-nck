@@ -20,8 +20,8 @@ class Topics extends Component {
       <div className="Topics">
         {this.props.username && (
           <NewTopic path="/" className="Topics-newtopic" />
-        )}{" "}
-        {<p>Only logged in users can add topics!</p>}
+        )}
+        {!this.props.username && <p>Only logged in users can add topics!</p>}
         <div className="Topics-view">
           <h1>All Topics </h1>
           <p>

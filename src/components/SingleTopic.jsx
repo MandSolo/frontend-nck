@@ -64,7 +64,7 @@ class SingleTopic extends Component {
         </div>
         {this.props.username && (
           <NewArticle path="/" className="New-article-by-topic" />
-        )}
+        )}{!this.props.username && <p>Only logged in users can add an article!</p>}
         <br />
 
       </div>
