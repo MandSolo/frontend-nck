@@ -25,7 +25,7 @@ class NewArticle extends Component {
             className="New-title"
             id="title"
             type="text"
-            placeholder="Article Title"
+            placeholder="Captivating Title..."
             value={this.state.title}
             onChange={this.handleChange}
             required
@@ -37,7 +37,7 @@ class NewArticle extends Component {
             onChange={this.handleTopicSelect}
             required
           >
-            <option value="options">Choose a topic here</option>
+            <option value="options">Choose a topic:</option>
             {topics.map(topic => (
               <option value={topic.slug}>{topic.slug}</option>
             ))}
@@ -47,7 +47,7 @@ class NewArticle extends Component {
             className="New-article-body"
             id="body"
             type="text"
-            placeholder="Write your article here..."
+            placeholder="Insightful and compelling article..."
             value={this.state.body}
             onChange={this.handleChange}
             required

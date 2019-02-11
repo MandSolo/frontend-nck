@@ -47,13 +47,8 @@ class SingleTopic extends Component {
               );
             })}
           </p>
-        </div>
-        {this.props.username && (
-          <NewArticle path="/" className="New-article-by-topic" />
-        )}
-        <br />
 
-        {page > 1 && (
+          {page > 1 && (
           <button className="buttonDown" onClick={this.pageDown}>
             Previous Page
           </button>
@@ -63,6 +58,15 @@ class SingleTopic extends Component {
             Next Page
           </button>
         )}
+
+
+
+        </div>
+        {this.props.username && (
+          <NewArticle path="/" className="New-article-by-topic" />
+        )}
+        <br />
+
       </div>
     );
   }

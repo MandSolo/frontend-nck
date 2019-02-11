@@ -1,6 +1,6 @@
 .Comments {
-  font-family: 'Roboto', sans-serif;
-  background-color: #CE1400;
+  font-family: "Montserrat", sans-serif;
+  background-color: #ce1400;
   color: white;
   margin: 5px;
   padding: 1px;
@@ -23,4 +23,30 @@
 .New-comment-body {
   width: 80%;
   height: 80px;
+  padding: 12px 20px;
+  margin: 8px 0;
+  border: none;
+}
+
+.Comments button {
+  background-color: #6e6e6e;
+  border: none;
+  color: white;
+  padding: 8px 16px;
+  text-decoration: none;
+  margin: 4px 2px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.Comments button:hover,
+button:active {
+  background-color: white;
+  border: none;
+  color: #6e6e6e;
+  padding: 8px 16px;
+  text-decoration: none;
+  margin: 4px 2px;
+  border-radius: 10px;
+  cursor: pointer;
 }

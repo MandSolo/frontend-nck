@@ -20,7 +20,7 @@ class NewTopic extends Component {
             className="New-slug"
             id="slug"
             type="text"
-            placeholder="New Topic Title"
+            placeholder="Thrilling topic..."
             value={this.state.slug}
             onChange={this.handleChange}
             required
@@ -30,7 +30,7 @@ class NewTopic extends Component {
             className="New-description"
             id="description"
             type="text"
-            placeholder="Please describe your topic..."
+            placeholder="Please elaborate..."
             value={this.state.description}
             onChange={this.handleChange}
             required

@@ -53,7 +53,7 @@ class Comments extends Component {
               className="New-comment-body"
               id="comment-body"
               type="text"
-              placeholder="Write your comment here..."
+              placeholder="Keep it contraversial..."
               value={this.state.body}
               onChange={this.handleChange}
               required

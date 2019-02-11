@@ -1,6 +1,6 @@
 .NewTopic {
-  font-family: 'Roboto', sans-serif;
-  background-color: #FC1800;
+  font-family: "Montserrat", sans-serif;
+  background-color: #fc1800;
   color: white;
   margin: 5px;
   padding: 1px;
@@ -9,10 +9,39 @@
 }
 
 .New-slug {
-  width: 80%;
+  width: 70%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  border: none;
 }
 
 .New-description {
-  width: 80%;
+  width: 70%;
   height: 40px;
+  padding: 12px 20px;
+  margin: 8px 0;
+  border: none;
+}
+
+.NewTopic button {
+  background-color: #6e6e6e;
+  border: none;
+  color: white;
+  padding: 8px 16px;
+  text-decoration: none;
+  margin: 4px 2px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.NewTopic button:hover,
+button:active {
+  background-color: white;
+  border: none;
+  color: #6e6e6e;
+  padding: 8px 16px;
+  text-decoration: none;
+  margin: 4px 2px;
+  border-radius: 10px;
+  cursor: pointer;
 }

@@ -1,5 +1,5 @@
 .Logged-in {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 25px;
   background-color: black;
   color: white;
@@ -10,7 +10,7 @@
 }
 
 .Login {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 25px;
   background-color: black;
   color: white;
@@ -18,4 +18,57 @@
   padding: 5px;
   border-radius: 10px;
   opacity: 0.9;
+}
+
+.Login-form {
+  width: 50%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  border: none;
+}
+
+.Login button {
+  background-color: #6e6e6e;
+  border: none;
+  color: white;
+  padding: 8px 16px;
+  text-decoration: none;
+  margin: 4px 2px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.Login button:hover,
+button:active {
+  background-color: white;
+  border: none;
+  color: #6e6e6e;
+  padding: 8px 16px;
+  text-decoration: none;
+  margin: 4px 2px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.logout button {
+  background-color: #6e6e6e;
+  border: none;
+  color: white;
+  padding: 8px 16px;
+  text-decoration: none;
+  margin: 4px 2px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.logout button:hover,
+button:active {
+  background-color: white;
+  border: none;
+  color: #6e6e6e;
+  padding: 8px 16px;
+  text-decoration: none;
+  margin: 4px 2px;
+  border-radius: 10px;
+  cursor: pointer;
 }

@@ -31,6 +31,7 @@ class Filter extends Component {
               Click To Sort
             </button>
           </form>
+          <p></p>
         </div>
       </div>
     );

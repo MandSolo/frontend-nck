@@ -4,7 +4,7 @@ import "../styling/Login.css";
 
 class Login extends Component {
   state = {
-    username: "tickle122",
+    username: "null",
     users: []
   };
 
@@ -24,10 +24,11 @@ class Login extends Component {
       </div>
     ) : (
       <div className="Login">
-        <p>Select your username:</p>
+        <p>Login to experience all that M C News has to offer!</p>
         <div className="Form">
           <form onSubmit={this.handleSubmit}>
-            <select value={this.state.username} onChange={this.handleChange}>
+            <select className="Login-form" value={this.state.username} onChange={this.handleChange}>
+            <option value="options">Choose your username:</option>
               {users.map(user => (
                 <option value={user.username}>{user.username}</option>
               ))}

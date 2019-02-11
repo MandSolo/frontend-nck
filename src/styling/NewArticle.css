@@ -1,5 +1,5 @@
 .NewArticle {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   background-color: #CE1400;
   color: white;
   margin: 5px;
@@ -9,16 +9,25 @@
 }
 
 .New-title {
-  width: 80%;
+  width: 70%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  border: none;
 }
 
 .Select-topic {
   width: 80%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  border: none;
 }
 
 .New-article-body {
-  width: 80%;
+  width: 70%;
   height: 200px;
+  padding: 12px 20px;
+  margin: 8px 0;
+  border: none;
 }
 
 .NewArticle a {
